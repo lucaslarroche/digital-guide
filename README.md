@@ -1,4 +1,4 @@
-#Digital Guide
+# Digital Guide
 Mini-guide de survie digitale
 
 > *« Je n'ai rien à cacher »* n'est pas une excuse valable pour vous permettre d'être imprudent.
