@@ -1,0 +1,433 @@
+/* Reboot
+/* -------------------------------------------------------- */
+@import url("reboot.css");
+
+
+
+/* HTML elements
+/* -------------------------------------------------------- */
+html, body {
+  font-family:
+    /* Safari for OS X and iOS (San Francisco) */
+    -apple-system,
+    /* Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android */
+    system-ui,
+    /* Chrome < 56 for OS X (San Francisco) */
+    BlinkMacSystemFont,
+    /* Windows */
+    "Segoe UI",
+    /* Android */
+    "Roboto",
+    /* Basic web fallback */
+    "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 18px;
+  line-height: 1.6em;
+  color: #455A64; /* Blue Grey 700 */
+}
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  -webkit-box-shadow: inset 0px 10px 30px -15px rgba(0,0,0,0.1);
+     -moz-box-shadow: inset 0px 10px 30px -15px rgba(0,0,0,0.1);
+          box-shadow: inset 0px 10px 30px -15px rgba(0,0,0,0.1);
+}
+h1, h2, h3 {
+  margin-bottom: 2.4em;
+  line-height: 1.2em;
+  font-weight: normal;
+  font-size: 2em;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  font-size: 1em;
+  color: #B0BEC5; /* Blue Grey 200 */
+}
+p, section ul {
+  margin-bottom: 2.4em;
+}
+section ul {
+  margin-top: -1.6em;
+}
+abbr, abbr[title] {
+  text-decoration: none;
+  border-bottom: 1px dashed #90A4AE; /* Blue Grey 300 */
+}
+a {
+  color: #03A9F4; /* Light Blue */
+}
+a:hover {
+  color: #01579B; /* Light Blue 900 */
+}
+
+/* External links */
+section a[href^="http://"],
+section a[href^="https://"] {
+  display: inline-block;
+  padding-right: 1em;
+}
+section li a[href^="http://"],
+section li a[href^="https://"] {
+  display: list-item;
+}
+section a[href^="http://"]:after,
+section a[href^="https://"]:after {
+  display: inline-block;
+  position:absolute;
+  content: " " ;
+  width: .75em;
+  height: .75em;
+  margin-left: .25em;
+  margin-top: .15em;
+  background: url(../img/external-link.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: -99;
+}
+
+
+
+/* Styles
+/* -------------------------------------------------------- */
+.code {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #78909C; /* Blue Grey 400 */
+}
+
+
+
+/* Grid
+/* -------------------------------------------------------- */
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+
+
+/* Header
+/* -------------------------------------------------------- */
+header {
+  padding-top: 120px;
+  padding-right: 15px;
+  padding-bottom: 120px;
+  padding-left: 15px;
+  text-align: center;
+  background-color: #37474F; /* Blue Grey 800 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01579b+0,263238+100 */
+  background: -moz-linear-gradient(-45deg, #01579b 0%, #263238 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #01579b 0%,#263238 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #01579b 0%,#263238 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01579b', endColorstr='#263238',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+header h1:before {
+  position: relative;
+  display: block;
+  content: " " ;
+  width: 2.4em;
+  height: 2.4em;
+  margin-bottom: .6em;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(../img/logo.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: .5;
+}
+header h1 {
+  font-weight: bold;
+  margin-bottom: .3em;
+  color: #FFF;
+}
+header h2 {
+  font-size: 1.6em;
+  color: #90A4AE; /* Blue Grey 300 */
+  margin-bottom: 0;
+}
+
+
+
+/* Titles underline
+/* -------------------------------------------------------- */
+h2:after {
+  content: "" ;
+  display: block;
+  margin-top: 1.2em;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  width: 120px;
+  height: 1px;
+  border-top: 1px solid #03A9F4; /* Light Blue */
+}
+section h2:after {
+  width: 60px;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  section h2:after {
+    margin-left: 0;
+  }
+  section h2 {
+    text-align: left;
+  }
+}
+
+
+
+/* Navigation
+/* -------------------------------------------------------- */
+
+/* Dropdown */
+nav ul {
+  display: block;
+  text-align: left;
+  z-index: 99;
+  background-color: #ECEFF1;
+  border-top: 5px solid #03A9F4; /* Light Blue */
+  margin-bottom: 0;
+}
+
+/* Links */
+nav ul li {
+  display: block;
+  margin-left: -2.2em;
+  list-style: none;
+  padding: 5px 15px;
+  border-bottom: 1px solid #CFD8DC; /* Blue Grey 100 */
+}
+nav ul li:last-child {
+  border: none;
+}
+nav ul li:hover {
+  background-color: #FFF;
+}
+nav ul li a {
+  display: block;
+  color: #455A64; /* Blue Grey 700 */
+}
+nav ul li a:hover {
+  text-decoration: none;
+}
+
+/* Burger menu */
+.burger {
+  display: none;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  /* Position */
+  nav {
+    position: fixed;
+    right: 35px;
+    top: 30px;
+    text-align: right;
+  }
+
+  /* Dropdown */
+  nav ul {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .14), 0 7px 17px 0 rgba(0, 0, 0, .20);
+    display: none;
+  }
+  nav.show ul {
+    display: block;
+    position: absolute;
+    right: -5px;
+    width: 350px;
+    overflow: hidden;
+  }
+
+  /* Burger menu */
+  .burger span {
+    display: none;
+  }
+  .burger {
+    display: inline-block;
+    cursor:pointer;
+    outline: 5px solid rgba(0,0,0,0.5) ; /* Black .5 */
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    background: linear-gradient(to bottom,
+      rgba(255,255,255,.5) 0% , rgba(255,255,255,.5) 20%, /* White .5 */
+      rgba(0,0,0,.5)       20%, rgba(0,0,0,.5)       40%, /* Black .5 */
+      rgba(255,255,255,.5) 40%, rgba(255,255,255,.5) 60%, /* White .5 */
+      rgba(0,0,0,.5)       60%, rgba(0,0,0,.5)       80%, /* Black .5 */
+      rgba(255,255,255,.5) 80%, rgba(255,255,255,.5) 100% /* White .5 */
+    ) ;
+  }
+  .burger:hover,
+  nav.show .burger {
+    outline: 5px solid rgba(0,0,0,0.75) ; /* Black .75 */
+    background: linear-gradient(to bottom,
+      rgba(255,255,255,1)  0% , rgba(255,255,255,1)  20%, /* White */
+      rgba(0,0,0,.75)      20%, rgba(0,0,0,.75)      40%, /* Black .75 */
+      rgba(255,255,255,1)  40%, rgba(255,255,255,1)  60%, /* White */
+      rgba(0,0,0,.75)      60%, rgba(0,0,0,.75)      80%, /* Black .75 */
+      rgba(255,255,255,1)  80%, rgba(255,255,255,1)  100% /* White */
+    ) ;
+  }
+}
+
+
+
+/* Footer
+/* -------------------------------------------------------- */
+footer {
+  padding-top: 60px;
+  padding-right: 15px;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  text-align: center;
+  background-color: #ECEFF1; /* Blue Grey 500 */
+  color: #90A4AE; /* Blue Grey 300 */
+  font-size: .85em;
+}
+footer p {
+  margin-bottom: 0;
+}
+footer a.github span {
+  display: none;
+}
+footer a.github:after {
+  position: relative;
+  display: block;
+  content: " " ;
+  width: 2.4em;
+  height: 2.4em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.4em;
+  background: url(../img/github.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: .5;
+}
+footer a.github:hover:after {
+  opacity: 1;
+}
+
+
+
+/* Component: blockquote
+/* -------------------------------------------------------- */
+blockquote {
+  font-size: 1.3em;
+  line-height: 1.6em;
+  color: #546E7A; /* Blue Grey 600 */
+  padding: 30px 15px;
+  margin-top: 2.4em;
+  margin-bottom: 3.2em;
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .07), 0 7px 17px 0 rgba(0, 0, 0, .1);
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  blockquote {
+    padding: 45px 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+blockquote p {
+  margin: 0;
+}
+
+
+
+/* Component: notes
+/* -------------------------------------------------------- */
+.notes:before {
+  content: "" ;
+  width: 60px;
+  height: 1px;
+  margin-bottom: 1em;
+  display: block;
+  border-top: 1px dashed #CFD8DC; /* Blue Grey 100 */
+}
+.notes {
+  padding-top: 60px;
+  font-size: .85em;
+  color: #90A4AE; /* Blue Grey 300 */
+}
+.notes p {
+  margin-bottom: 1.2em;
+  line-height: 1.5;
+}
+
+
+
+/* Component: multiligne bulleted list
+/* -------------------------------------------------------- */
+ul.multiligne li {
+  margin-bottom: 1.2em;
+}
+
+
+
+/* Component: num
+/* -------------------------------------------------------- */
+
+.num {
+  display: block;
+  background-color: #03A9F4; /* Light Blue */
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.4em;
+  color: #FFF;
+  margin-bottom: .6em;
+  font-size: .6em;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav .num {
+  display: inline-block;
+  margin-bottom: 0;
+  width: 2.2em;
+  height: 2.2em;
+  line-height: 2.2em;
+  background-color: #455A64; /* Blue Grey 700 */
+  margin-right: 1em;
+}
+nav a:hover .num {
+  background-color: #03A9F4; /* Light Blue */
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  section .num {
+    position: absolute;
+    margin-left: -3.6em;
+  }
+}
+
+
+
+/* Ajustments
+/* -------------------------------------------------------- */
+#introduction blockquote {
+  margin-top: 0;
+}
