@@ -1,498 +1,378 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
 
-	<head>
-
-		<!-- Settings -->
+    <!-- Settings -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- SEO -->
-		<title>Digital Guide : Comment sécuriser votre vie numérique ?</title>
-		<meta name="description" content="Mini-guide de survie digitale. VPN, Mots de passe, Gestionnaire de mots de passe, Authentification à deux-facteurs, Antivirus et mises-à-jour, Sauvegarde, Multiples comptes, Tier de confiance, Cryptage, Données sensibles, Données publiques">
-		<meta name="robots" content="index, follow">
-		<meta name="author" content="https://github.com/imnotadeveloper" />
-		<meta name="copyright" content="https://github.com/imnotadeveloper/digital-guide/blob/master/LICENSE.md" />
+    <!-- SEO -->
+    <title>Digital Guide : Comment sécuriser votre vie numérique ?</title>
+    <meta name="description" content="Mini-guide de survie digitale. VPN, Mots de passe, Gestionnaire de mots de passe, Authentification à deux-facteurs, Antivirus et mises-à-jour, Sauvegarde, Multiples comptes, Tier de confiance, Cryptage, Données sensibles, Données publiques">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="https://github.com/imnotadeveloper" />
+    <meta name="copyright" content="https://github.com/imnotadeveloper/digital-guide/blob/master/LICENSE.md" />
 
-		<!-- Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/img/fav/favicon-16x16.png">
-		<link rel="manifest" href="/img/fav/manifest.json">
-		<link rel="mask-icon" href="/img/fav/safari-pinned-tab.svg" color="#40c4ff">
-		<link rel="shortcut icon" href="favicon.ico">
-		<meta name="msapplication-config" content="/img/fav/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/fav/favicon-16x16.png">
+    <link rel="manifest" href="/img/fav/manifest.json">
+    <link rel="mask-icon" href="/img/fav/safari-pinned-tab.svg" color="#40c4ff">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-config" content="/img/fav/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-		<!-- Styles -->
-		<link href="css/main.min.css" rel="stylesheet">
+    <!-- Styles -->
+    <link href="css/main.min.css" rel="stylesheet">
   </head>
 
   <body>
 
-  	<!-- Header -->
-  	<header>
-  		<div class="container">
-
-  			<h1>Comment sécuriser votre vie numérique&nbsp;?</h1>
-  			<h2>Mini-guide de survie digitale</h2>
-
-  		</div>
-  	</header><!-- /. Header -->
-
-  	<!-- Navigation -->
-  	<nav>
-
-  		<h3 class="burger"><span>Sommaire</span></h3>
-
-  		<ul>
-  			<li><a href="#introduction">Pourquoi&nbsp;?</a></li>
-  			<li><a href="#vpn"><span class="num">1</span> VPN</a></li>
-  			<li><a href="#mots-de-passe"><span class="num">2</span> Mots de passe</a></li>
-  			<li><a href="#gestionnaire-de-mdp"><span class="num">3</span> Gestionnaire de mots de passe</a></li>
-  			<li><a href="#deux-facteurs"><span class="num">4</span> Authentification à deux-facteurs</a></li>
-  			<li><a href="#antivirus-et-maj"><span class="num">5</span> Antivirus et mises-à-jour</a></li>
-  			<li><a href="#sauvegarde"><span class="num">6</span> Sauvegarde</a></li>
-  			<li><a href="#multi-comptes"><span class="num">7</span> Multiples comptes</a></li>
-  			<li><a href="#tier-de-confiance"><span class="num">8</span> Tier de confiance</a></li>
-  			<li><a href="#cryptage"><span class="num">9</span> Cryptage</a></li>
-  			<li><a href="#cryptage-personnel"><span class="num">10</span> Données sensibles</a></li>
-  			<li><a href="#auto-censure"><span class="num">+</span> Données publiques</a></li>
-  		</ul>
-
-  	</nav><!-- /. Navigation -->
-
-  	<!-- Section: #introduction -->
-  	<section id="introduction">
-  		<div class="container">
-
-  			<blockquote>
-  				<p><strong><em>«&nbsp;Je n'ai rien à cacher&nbsp;»</em> n'est pas une excuse valable pour vous permettre d'être imprudent.</strong></p>
-  			</blockquote>
-
-  			<p>Si vous êtes ni millionnaire, ni un personnage public, ni un criminel international, il est en effet <em>possible</em> qu'aucun hacker ne vous cible personnellement, mais ça ne vous protège pas pour autant.</p>
-
-  			<p>Les pirates ciblent la masse : les <a href="https://www.google.fr/search?tbm=nws&amp;hl=fr&amp;q=vol+massif+de+mots+de+passe">vols de mots de passe</a>, les <a href="https://www.google.fr/search?tbm=nws&amp;hl=fr&amp;q=ransomware">ransomwares</a>, et les campagnes de <a href="https://www.google.fr/search?tbm=nws&amp;hl=fr&amp;q=phishing">phishing</a> visent des millions de personnes à la fois. La probabilité que vous en soyez victime un jour est donc très forte&nbsp;<sup class="ref"><a href="#note1" id="ref1">[1]</a></sup>.</p>
-
-  			<p>Personne n'est à l'abri d'être un jour la cible d'un amoureux éconduit, d'un concurrent jaloux ou d'un ami trop curieux, ça arrive tous les jours, à des dizaines de milliers de personnes.</p>
-
-  			<p>Mon objectif est de vous donner quelques règles simples pour vous éviter par exemple que :</p>
-
-  			<ul>
-  				<li>votre identité soit usurpée,</li>
-  				<li>vos données soient prises en otage,</li>
-  				<li>vos comptes bancaires soient vidés,</li>
-  				<li>vos photos privées soient rendues publiques,</li>
-  				<li>un <em>stalker</em> débarque chez vous après avoir fouillé votre vie numérique,</li>
-  				<li>etc.</li>
-  			</ul>
-
-  			<p>Ces recommandations ne constituent en aucun cas un moyen d'échapper à la <abbr title="National Security Agency (USA)">NSA</abbr> ou toute autre organisation gouvernementale ou paragouvernementale&nbsp;<sup class="ref"><a href="#note2" id="ref2">[2]</a></sup>.</p>
-
-  			<p>Je ne suis ni pirate ni ingénieur informatique, mais comme vous, je passe ma vie sur Internet. Les recommandations que je fais ne sont pas très complexes à appliquer, il s'agît surtout de bon sens et de bonnes pratiques. Autant que possible, j'ai essayé d'être ni parano, ni complotiste.</p>
-
-  			<p>Ce guide est forcement imparfait. Certains le trouveront trop léger, et beaucoup le trouveront trop complexe.
-  			Selon moi, il s'agît du minimum vital.</p>
-
-  			<!-- Notes -->
-  			<div class="notes">
-
-  				<p id="note1">[1]&nbsp;:&nbsp;Il est d'ailleurs fort probable que l'un de vos comptes ai déjà été piraté. En entrant votre email sur <a href="https://haveibeenpwned.com">ce site</a>, vous pourriez-bien découvrir que vos données ont déjà été corrompues.&nbsp;<a href="#ref1" class="retour">&#8617;</a></p>
-
-  				<p id="note2">[2]&nbsp;:&nbsp;Si vous souhaitiez néanmoins sérieusement échapper à des organisations de type <abbr title="National Security Agency (USA)">NSA</abbr> il vous faudrait a minima&nbsp;:&nbsp;bannir l'utilisation de tous les réseaux sociaux, n'utiliser aucun service de stockage cloud, vous connecter sur Internet via le <a href="https://fr.wikipedia.org/wiki/Tor_(réseau)">réseau Tor</a>, créer des <a href="https://www.google.fr/search?q=proxy+chains">chaînes de proxy</a>, vous intéresser à la <a href="https://fr.wikipedia.org/wiki/Cryptographie">Cryptographie</a>, etc.&nbsp;<a href="#ref2" class="retour">&#8617;</a></p>
-
-  			</div><!-- /. Notes -->
-
-  		</div>
-  	</section><!-- /. Section: #introduction -->
-
-  	<!-- Section: #vpn -->
-  	<section id="vpn">
-  		<div class="container">
-
-  			<h2><span class="num">1</span> Sécurisez votre connexion Internet avec un VPN</h2>
-
-  			<p>N'importe quel Fournisseur d'Accès Internet (FAI) peut vous espionner et enregistrer votre activité.</p>
-
-  			<p>Vous pouvez, <em>a priori</em>, plutôt faire confiance à votre connexion à domicile, au bureau, ou à votre opérateur mobile, mais les connexions wifi publiques sont vraiment très risquées. Et même si le café, l'aéroport ou l'hôtel ne vous espionne pas directement, il souvent possible pour un hacker de surveiller votre activité sur ces réseaux ouverts, et donc de récupérer vos informations confidentielles.</p>
-
-  			<blockquote>
-  				<p><strong>Si vous devez utiliser des connexions publiques (cafés, aéroports, hôtels, etc.), utilisez impérativement un <a href="https://fr.wikipedia.org/wiki/Réseau_privé_virtuel">VPN</a> sur votre ordinateur bien sûr, mais aussi sur tous vos appareils mobiles.</strong></p>
-  			</blockquote>
-
-  			<p>Un VPN est un système qui chiffre et masque votre activité sur Internet. Ainsi, ni un hacker, ni le fournisseur de votre connexion Internet ne peuvent savoir ce que vous faîtes.</p>
-
-  			<p>Idéalement, il faudrait utiliser un VPN tout le temps, même chez vous.</p>
-
-  			<p>Attention cependant, le VPN pourrait lui même enregistrer vos informations personnelles.
-  			Il faut donc impérativement veiller à utiliser un VPN de confiance et payant&nbsp;<sup class="ref"><a href="#note3" id="ref3">[3]</a></sup>.</p>
-
-  			<p>Voici une sélection de quelques VPN : </p>
-
-  			<ul>
-  				<li><a href="https://www.hidemyass.com">HideMyAss</a></li>
-  				<li><a href="https://www.privateinternetaccess.com">PIA (Private Internet Access)</a></li>
-  				<li><a href="https://www.expressvpn.com/">ExpressVPN</a></li>
-  				<li><a href="https://www.ipvanish.com">IPVanish</a></li>
-  				<li><a href="https://www.purevpn.fr">PureVPN</a></li>
-  				<li><a href="http://www.cyberghostvpn.com">CyberGhost</a></li>
-  				<li><a href="https://nordvpn.com">NordVPN</a></li>
-  				<li><a href="https://www.goldenfrog.com/vyprvpn">VyprVPN</a></li>
-  			</ul>
-
-  			<!-- Notes -->
-  			<div class="notes">
-
-  				<p id="note3">[3]&nbsp;:&nbsp;Car <em>«&nbsp;Si c’est gratuit, c’est que vous êtes le produit.&nbsp;»</em>&nbsp;<a href="#ref3" class="retour">&#8617;</a></p>
-
-  			</div><!-- /. Notes -->
-
-  		</div>
-  	</section><!-- /. Section: #vpn -->
-
-  	<!-- Section: #mots-de-passe -->
-  	<section id="mots-de-passe">
-  		<div class="container">
-
-  			<h2><span class="num">2</span> Créez des mots de passe longs et uniques</h2>
-
-  			<blockquote>
-  				<p><strong>Générez des mots de passe complexes de 9 caractères minimum</strong></p>
-  			</blockquote>
-
-  			<p>Une des techniques courante pour trouver un mot de passe est de tester toutes les combinaisons possibles&nbsp;<sup class="ref"><a href="#note4" id="ref4">[4]</a></sup>. </p>
-
-  			<p><strong>En dessous de 9 caractères, il faut seulement quelques heures pour tester toutes les combinaisons possibles d'un mot de passe</strong>&nbsp;<sup class="ref"><a href="#note5" id="ref5">[5]</a></sup>.<br/>
-  			A partir de 9 caractères il faut théoriquement plusieurs mois pour <em>casser</em> votre mot de passe.</p>
-
-  			<p>Attention cependant, ça n'est valable que si votre mot de passe contient à la fois des lettres minuscules et majuscules, des chiffres et des symboles. Car pour <em>casser</em> un mot de passe de 9 caractères composé seulement de lettres, il suffit quelques-minutes.</p>
-
-  			<p>Voici quelques générateurs de mots de passes en ligne : </p>
-
-  			<ul>
-  				<li><a href="http://www.donnemoiunmotdepasse.fr">Donne moi un mot de passe</a></li>
-  				<li><a href="https://www.generateurdemotdepasse.com">Générateur de mot de passe</a></li>
-  				<li><a href="http://passwordsgenerator.net">Password generator</a></li>
-  			</ul>
-
-  			<blockquote>
-  				<p><strong>Utilisez des mots de passe uniques pour chaque service</strong></p>
-  			</blockquote>
-
-  			<p>Une autre manière courante de récupérer des mots de passe pour les hackers est d'acheter des mots de passe volés sur d'autres sites.</p>
-
-  			<p>Domino's Pizza, Playstation, Uber, eBay, UPS, Yahoo, Evernote, Nintendo, Linkedin par exemple&nbsp;<sup class="ref"><a href="#note6" id="ref6">[6]</a></sup> ont tous connus des vols massifs de données. Si vous aviez par exemple le même mot de passe sur Linkedin et sur Gmail quelqu'un pourrait s'introduire dans votre boite mail.</p>
-
-  			<p>Il faut bien imaginer que tout cela se fait à grande échelle. Les pirates achètent des énormes <em>packs</em> de mots de passe volés, et les testent systématiquement sur tous les sites qui les intéressent : Amazon, Google, Skype, Paypal, etc.</p>
-
-  			<p>Ce n'est donc pas simplement une recommandation. Il est absolument nécessaire que vous ayez des mots de passe uniques sur chaque site. Sinon, toutes vos données personnelles pourraient finir par être compromises.</p>
-
-  			<!-- Notes -->
-  			<div class="notes">
-
-  				<p id="note4">[4]&nbsp;:&nbsp;<a href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">Attaque par force brute</a> ou <a href="https://fr.wikipedia.org/wiki/Attaque_par_dictionnaire">Attaque par dictionnaire</a>&nbsp;<a href="#ref5" class="retour">&#8617;</a></p>
-
-  				<p id="note5">[5]&nbsp;:&nbsp;Vous pouvez tester le temps théorique qu'il faudrait pour craquer vos mots de passe sur <a href="https://howsecureismypassword.net">ce site</a>&nbsp;<a href="#ref6" class="retour">&#8617;</a></p>
-
-  				<p id="note6">[6]&nbsp;:&nbsp;Une liste des principaux vols massifs de données <a href="https://en.wikipedia.org/wiki/List_of_data_breaches">ici</a>&nbsp;<a href="#ref6" class="retour">&#8617;</a></p>
-
-  			</div><!-- /. Notes -->
-
-  		</div>
-  	</section><!-- /. Section: #mots-de-passe -->
-
-  	<!-- Section: #gestionnaire-de-mdp -->
-  	<section id="gestionnaire-de-mdp">
-  		<div class="container">
-
-  			<h2><span class="num">3</span> Utilisez un gestionnaire de mots de passe</h2>
-
-  			<p>Mails, réseaux sociaux, programmes de fidélité, finances, applications mobiles, etc. nous avons tous au minimum plusieurs dizaines de mots de passe, et il n'est pas humainement possible de tous les retenir (surtout quand vos mots de passe ressemblent à ça&nbsp;:&nbsp;<span class="code">2=4Dq7h!N9</span>).</p>
-
-  			<p>La solution que nous utilisons en général par défaut est donc de laisser notre navigateur Internet se souvenir de nos mots de passe. C'est une assez mauvaise habitude.</p>
-
-  			<p>Même si la plupart des navigateurs <em>cryptent</em> vos mots de passe, ils sont affichés en clair à partir du moment où l'ordinateur et le navigateur sont ouverts.</p>
-
-  			<p>Quiconque s'introduirait sur votre machine pourrait donc à sa guise se connecter à tous vos services en ligne.</p>
-
-  			<p>Ensuite, les navigateurs ne retiennent que les mots de passe utilisés sur des pages Internet. Au fil du temps, vous avez donc des mots de passe partout : dans vos navigateurs Internet au bureau à la maison et sur mobile, dans votre système d'exploitation pour les accès wifi, dans un fichier «&nbsp;notes&nbsp;» pour les applications sur Smartphone, sur un carnet papier pour certains accès professionnels, etc.</p>
-
-  			<p>Ce système de gestion chaotique est trop complexe pour qu'il soit fiable et pérenne. <em>Comment ferez-vous dans 5 ans&nbsp;? Et quand vous changerez d'ordinateur&nbsp;?</em> Vous laissez forcement trainer des informations sensibles à de très nombreux endroits, et pour vous faciliter la vie, vous utilisez très probablement les mêmes mots de passe sur de nombreux services.</p>
-
-  			<blockquote>
-  				<p><strong>Utilisez un gestionnaire de mots de passe pour sécuriser en un seul lieu tous vos mots de passe, vos adresses, vos numéros de téléphones, vos IBANs, vos cartes de fidélités, etc.</strong></p>
-  			</blockquote>
-
-  			<p>Les gestionnaires de mots de passe chiffrent l'ensemble de ces données sensibles. Il vous suffit alors d'entrer votre mot de passe principal pour tout débloquer.</p>
-
-  			<p>C'est bien sûr la faille de ce système. Si quelqu'un entre sur votre machine (physiquement ou virtuellement) et que votre mot de passe principal est compromis, c'est toute votre vie numérique qui peut être volée.</p>
-
-  			<p>Ce n'est pas une solution parfaite, mais c'est pragmatique, simple et relativement sécurisé.</p>
-
-  			<p>Choisissez un mot de passe très complexe pour <em>encrypter</em> l'accès à votre gestionnaire de mot de passe (une quinzaine de caractères), ne le notez-pas, retenez-le.</p>
-
-  			<p>Supprimez ensuite tous vos mots de passe sur Chrome, Firefox, Safari ou Edge, désactivez l'enregistrement automatique des mots de passe, et n'utilisez plus que votre gestionnaire de mot de passe.</p>
-
-  			<p>Les gestionnaires de mot de passe permettent en général de générer automatiquement des mots de passes complexes pour chaque accès. C'est donc un problème de moins à se préoccuper.</p>
-
-  			<p>Voici une sélection de quelques Gestionnaires de mots de passe : </p>
-
-  			<ul>
-  				<li><a href="https://www.dashlane.com">Dashlane</a></li>
-  				<li><a href="https://www.lastpass.com">LastPass</a></li>
-  				<li><a href="https://keepersecurity.com">Keeper </a></li>
-  				<li><a href="https://1password.com">1Password</a></li>
-  				<li><a href="https://www.truekey.com">True Key</a></li>
-  			</ul>
-
-  		</div>
-  	</section><!-- /. Section: #gestionnaire-de-mdp -->
-
-  	<!-- Section: #deux-facteurs -->
-  	<section id="deux-facteurs">
-  		<div class="container">
-
-  			<h2><span class="num">4</span> Activez l'authentification à deux-facteurs</h2>
-
-  			<p>De nombreux types d’attaque permettent de trouver vos mots de passe. Si vous êtes ciblés personnellement, l'<em><a href="https://fr.wikipedia.org/wiki/Ingénierie_sociale_(sécurité_de_l%27information)">ingénierie sociale</a></em> est par exemple l'une des méthodes les plus redoutable. </p>
-
-  			<p>Le <em>social engineering</em> est le fait d'utiliser votre ignorance ou votre crédulité pour voler vos informations personnelles. Cela peut se concrétiser par exemple (parmi des centaines d'autres techniques possibles) par un faux mail envoyé de la part de votre responsable informatique pour vous demander de changer votre de mot de passe&nbsp;<sup class="ref"><a href="#note7" id="ref7">[7]</a></sup>. C'est par ce genre de techniques par exemple que les <a href="https://www.google.fr/search?tbm=nws&amp;hl=fr&amp;q=hillary+clinton+john+podesta+phishing">emails d'Hillary Clinton</a> auraient été volés.</p>
-
-  			<blockquote>
-  				<p><strong>Une des seules façons de vous protéger face à un vol de mot de passe est l'authentification à deux-facteurs.</strong><br/>
-  				Vous devez impérativement activer cette fonctionnalité sur tous vos comptes sensibles.</p>
-  			</blockquote>
-
-  			<p>Concrètement, une fois l'authentification à 2 facteurs activée, à chaque fois que vous vous connectez depuis un nouvel appareil, vous recevez un code de sécurité (par SMS, ou affiché sur votre mobile) pour valider votre accès. </p>
-
-  			<p>Voici des infos pour configurer <em>2-Step Verification</em> sur les principaux services en ligne : </p>
-
-  			<ul>
-  				<li><a href="https://www.google.com/intl/fr/landing/2step/">Google</a></li>
-  				<li><a href="https://support.apple.com/fr-fr/HT204915">Apple</a></li>
-  				<li><a href="https://support.microsoft.com/fr-be/help/12408/microsoft-account-about-two-step-verification">Microsoft</a></li>
-  				<li><a href="https://fr-fr.facebook.com/help/148233965247823">Facebook</a></li>
-  				<li><a href="https://www.amazon.fr/gp/help/customer/display.html?nodeId=202025410">Amazon</a></li>
-  				<li><a href="https://www.dropbox.com/fr/help/security/enable-two-step-verification">Dropbox</a></li>
-  			</ul>
-
-  			<p><em>N'oubliez pas votre banque bien sûr&nbsp;!</em></p>
-
-  			<p>C'est une contrainte supplémentaire, mais c'est là aussi absolument nécessaire pour des comptes aussi sensibles.</p>
-
-  			<p>J'utilise personnellement <a href="https://support.google.com/accounts/answer/1066447?hl=fr">Google Authenticator</a> dès que c'est possible. C'est selon moi plus pratique, fiable et rapide que les SMS.</p>
-
-  			<p>Lorsque vous activez l'authentification à 2 facteurs, ont vous propose en général de générer des <em>clés de secours</em> pour le cas ou vous perdriez votre mobile. Si vous avez opté pour un <a href="#gestionnaire-de-mdp">gestionnaire de mots de passe</a>, c'est le bon endroit pour y stocker ces clés.</p>
-
-  			<!-- Notes -->
-  			<div class="notes">
-
-  				<p id="note7">[7]&nbsp;:&nbsp;Voir <a href="https://fr.wikipedia.org/wiki/Hameçonnage">Hameçonnage ou Phishing</a>&nbsp;<a href="#ref7" class="retour">&#8617;</a></p>
-
-  			</div><!-- /. Notes -->
-
-  		</div>
-  	</section><!-- /. Section: #deux-facteurs -->
-
-  	<!-- Section: #antivirus-et-maj -->
-  	<section id="antivirus-et-maj">
-  		<div class="container">
-
-  			<h2><span class="num">5</span> Installez un antivirus et activez les mises-à-jour automatiques</h2>
-
-  			<p>C'est un des conseils les plus répandus, je ne vais donc pas m'attarder là dessus. Mais là aussi c'est très important.</p>
-
-  			<p>La sécurité numérique est un gigantesque jeu du chat et la souris à l'échelle mondiale entre les hackers, les agences gouvernementales et les services en ligne.</p>
-
-  			<p>Les services numériques mettent donc à jour en permanence leurs outils au fur et à mesure de la découverte de failles de sécurité.</p>
-
-  			<p>Nous n'aimons pas toujours laisser la main à Microsoft, Apple, Google ou des antivirus pour qu'ils fassent directement des modifications sur nos appareils, mais c'est pourtant une des façons les plus efficace de se protéger.</p>
-
-  			<blockquote>
-  				<p><strong>Installez un antivirus</strong> (même sur macOS et Android) <strong>et activez les mises à jours automatiques sur tous vos appareils.</strong></p>
-  			</blockquote>
-
-  			<p>Voici quelques guides pour activer les mises-à-jour automatiques : </p>
-
-  			<ul>
-  				<li><a href="https://support.microsoft.com/fr-ch/help/15081/windows-turn-on-automatic-app-updates">Windows</a></li>
-  				<li><a href="https://support.google.com/googleplay/answer/113412?hl=fr">Android</a></li>
-  				<li><a href="https://support.apple.com/fr-fr/HT201541">macOS</a></li>
-  				<li><a href="https://support.apple.com/fr-fr/HT202180">iOS</a></li>
-  			</ul>
-
-  		</div>
-  	</section><!-- /. Section: #antivirus-et-maj -->
-
-  	<!-- Section: #sauvegarde -->
-  	<section id="sauvegarde">
-  		<div class="container">
-
-  			<h2><span class="num">6</span> Sauvegardez vos données</h2>
-
-  			<p>Je ne m'attarderais pas non plus là-dessus tellement il est évident qu'il faut impérativement sauvegarder régulièrement vos données.</p>
-
-  			<p>Regardez du côté de <a href="https://support.apple.com/fr-fr/HT201250">Time Machine</a> sous MacOS et du côté de l'<a href="https://support.microsoft.com/fr-fr/help/17128/windows-8-file-history">Historique des fichiers</a> sous Windows.</p>
-
-  			<p><strong>La question de la sauvegarde de vos données dans le Cloud est très sensible.</strong> C'est à chacun de peser le pour et le contre.</p>
-
-  			<p>Vos données sur Google Drive, Dropbox et iCloud, sont aussi sécurisées que vos comptes sur ces services. Si votre <a href="#mots-de-passe">mot de passe est unique et complexe</a>, et que vous avez activé l'<a href="#deux-facteurs">authentification à 2 facteurs</a>. Vos données sont <em>relativement</em> bien protégées contre un hacker isolé.</p>
-
-  			<p>En revanche, c'est <strong>une porte d'accès directe pour les agences fédérales américaines</strong>&nbsp;<sup class="ref"><a href="#note8" id="ref8">[8]</a></sup>.</p>
-
-  			<p>Tout ce qui est très sensible ne devrait pas s'y trouver : vos mots de passes, vos documents d'identité, vos photos coquines, etc.</p>
-
-  			<!-- Notes -->
-  			<div class="notes">
-
-  				<p id="note8">[8]&nbsp;:&nbsp;<a href="http://fortune.com/2017/05/09/snowden-danger-of-cloud/">Edward Snowden déclare qu'utiliser des services Cloud est à vos risques et périls</a>&nbsp;<a href="#ref8" class="retour">&#8617;</a></p>
-
-  			</div><!-- /. Notes -->
-
-  		</div>
-  	</section><!-- /. Section: #sauvegarde -->
-
-  	<!-- Section: #multi-comptes -->
-  	<section id="multi-comptes">
-  		<div class="container">
-
-  			<h2><span class="num">7</span> Gérez plusieurs comptes mail et Facebook</h2>
-
-  			<p>Vos comptes Facebook et Google sont souvent requis pour accéder à des services secondaires tels que Netflix, Airbnb, Instagram ou Uber.</p>
-
-  			<p>Si c'est effectivement très pratique et rapide, au bout de quelques-années on se retrouve à avoir autorisé l'accès à nos données personnelles à des dizaines de services plus ou moins éthiques et sécurisés.</p>
-
-  			<p>Est-il vraiment important de donner notre identité complète et toute notre liste d'amis à Tinder, Tripadvisor, Spotify ou Pinterest&nbsp;?</p>
-
-  			<blockquote>
-  				<p><strong>Vous ne devriez donner l'accès à vos comptes Facebook et Google principaux que lorsque c'est absolument nécessaire.</strong> Pour tous les services où l'anonymat est possible, vous devriez utiliser des comptes secondaires.</p>
-  			</blockquote>
-
-  			<p>En plus de sécuriser vos données personnelles, avoir 2 comptes pour Facebook et Google permet aussi de pouvoir nous exprimer plus librement et anonymement et d'éviter le SPAM ou l'envahissement des notifications sur nos comptes principaux.</p>
-
-  			<p>Idéalement toutes les quelques années, on remplacera nos comptes secondaires.</p>
-
-  			<p>Si vous ne souhaitez pas utiliser de comptes secondaires&nbsp;:</p>
-
-  			<ul class="multiligne">
-  				<li>Quand cela est possible, créez vos accès sur des nouveaux services en renseignant votre email plutôt qu'avec une connexion Facebook ou Google,</li>
-  				<li>Limitez au maximum les autorisations que vous donnez. Il est par exemple souvent possible de décocher l'accès à la liste d'amis lorsque vous vous authentifiez par Facebook&nbsp;<sup class="ref"><a href="#note9" id="ref9">[9]</a></sup>.</li>
-  			</ul>
-
-  			<!-- Notes -->
-  			<div class="notes">
-
-  				<p id="note9">[9]&nbsp;:&nbsp;Vos amis sont une excellente porte d'entrée pour le <a href="https://fr.wikipedia.org/wiki/Hameçonnage">phishing</a>, le <a href="https://fr.wikipedia.org/wiki/Ransomware">chantage</a> et l'<a href="https://fr.wikipedia.org/wiki/Ingénierie_sociale_(sécurité_de_l%27information)">ingénierie sociale</a>&nbsp;<a href="#ref9" class="retour">&#8617;</a></p>
-
-  			</div><!-- /. Notes -->
-
-  		</div>
-  	</section><!-- /. Section: #multi-comptes -->
-
-  	<!-- Section: #tier-de-confiance -->
-  	<section id="tier-de-confiance">
-  		<div class="container">
-
-  			<h2><span class="num">8</span> Utilisez des tiers de confiance pour les paiements</h2>
-
-  			<blockquote>
-  				<p><strong>Dès que c'est possible, achetez sur <a href="https://www.amazon.fr">Amazon</a> plutôt que sur un site marchant directement ou payez via <a href="https://www.paypal.fr">Paypal</a>, <a href="https://www.apple.com/fr/apple-pay/">Apple Pay</a> ou <a href="https://www.google.com/wallet/">Google Wallet</a>.</strong></p>
-  			</blockquote>
-
-  			<p>Non seulement ces services sont reconnus pour être parmi les plus sécurisés, mais ils offrent aussi des politiques de protection du consommateur très avantageuses. Si un produit ou un service n'est pas livré ou n'est pas conforme, il sera très facile de vous faire rembourser, souvent même sans avoir à vous justifier.</p>
-
-  			<p>Bien sûr en passant encore et encore par ses services, nous renforçons toujours plus leur position dominante. Mais entre deux maux, il faut choisir le moindre. Pour moi c'est limpide, la sécurité des transactions passe très loin devant le militantisme, le protectionnisme économique et les postures philosophiques (Laissons ces sujets à nos dirigeants).</p>
-
-  			<p>Evitez aussi d'enregistrer vos cartes bancaires sur des services secondaires comme Netflix, Booking, Agoda, Airbnb, etc. Au minimum, ce sera plus facile d'arrêter un prélèvement automatique via Paypal ou Apple Pay par exemple, mais vos transactions seront aussi <em>probablement</em> plus sécurisées.</p>
-
-  		</div>
-  	</section><!-- /. Section: #tier-de-confiance -->
-
-  	<!-- Section: #cryptage -->
-  	<section id="cryptage">
-  		<div class="container">
-
-  			<h2><span class="num">9</span> Cryptez vos disques durs et vos conversations</h2>
-
-  			<p>De nombreux services et outils proposent désormais de crypter nativement vos données et vos messages. Encore faut-il l'avoir activé.</p>
-
-  			<blockquote>
-  				<p><strong>Activez le cryptage partout où c'est possible</strong></p>
-  			</blockquote>
-
-  			<p>Pour votre ordinateur, activez <a href="https://support.apple.com/fr-fr/HT204837">File Vault</a> sur macOS ou <a href="https://technet.microsoft.com/fr-fr/library/cc732774(v=ws.11).aspx">BitLocker Drive Encryption</a> sur Windows.</p>
-
-  			<p>Pour votre mobile, utilisez simplement votre identifiant Apple pour que vos appareils iOS soit cryptés. Sur Android ça dépend du constructeur, mais c'est <a href="https://docs.microsoft.com/fr-fr/intune-user-help/encrypt-your-device-android">généralement possible</a> aussi.</p>
-
-  			<p>C'est aussi possible pour de nombreuses applications de messagerie comme <a href="https://support.google.com/mail/answer/6330403?hl=fr">Gmail</a>, <a href="https://www.facebook.com/help/messenger-app/811527538946901">Messenger</a>, <a href="https://support.skype.com/fr/faq/FA31/est-ce-que-skype-utilise-le-chiffrement">Skype</a>, <a href="https://faq.whatsapp.com/fr/general/28030015">WhatsApp</a>, <a href="https://help.line.me/line/ios/categoryId/20000012/3/pc?lang=en#20000263">Line</a>, <a href="http://admin.wechat.com/wiki/index.php?title=Message_Cryptography_FAQs">WeChat</a>, etc. mais il faut vous renseigner au cas par cas, selon votre usage personnel.</p>
-
-  		</div>
-  	</section><!-- /. Section: #cryptage -->
-
-  	<!-- Section: #cryptage-personnel -->
-  	<section id="cryptage-personnel">
-  		<div class="container">
-
-  			<h2><span class="num">10</span> Mettez à l'abri vos données sensibles</h2>
-
-  			<p>Si vous avez besoin de protéger plus fortement des données privées comme un dossier médical, des photos coquines, des Bitcoins, une double vie, les coordonnées GPS d'une capsule temporelle, etc. vous devriez fortement envisager de vous construire un <a href="https://fr.wikipedia.org/wiki/Coffre-fort_numérique">Coffre-fort numérique</a>.</p>
-
-  			<p>Il existe des logiciels de cryptage assez faciles à utiliser et reconnus comme <em>a priori</em> fiables. Par exemple : </p>
-
-  			<ul>
-  				<li><a href="https://www.veracrypt.fr/">VeraCrypt</a></li>
-  				<li><a href="https://www.ciphershed.org">CipherShed</a></li>
-  				<li><a href="https://diskcryptor.net/">DiskCryptor</a></li>
-  				<li><a href="https://gitlab.com/cryptsetup/cryptsetup/">LUKS</a></li>
-  			</ul>
-
-  			<p>Renseignez-vous.</p>
-
-  		</div>
-  	</section><!-- /. Section: #cryptage-personnel -->
-
-  	<!-- Section: #auto-censure -->
-  	<section id="auto-censure">
-  		<div class="container">
-
-  			<h2><span class="num">+</span> Soyez attentif à ce que vous publiez</h2>
-
-  			<h3>Ne publiez pas d'informations privées</h3>
-
-  			<p>Je suis parti du principe que vous n'étalez pas votre vie privée en public. Ce n'est pas donc pas l'objet de ce guide, mais je vous recommande de ne pas publier pas votre localisation ou vos coordonnées personnelles et de masquer votre liste d'amis.</p>
-
-  			<h3>Vérifiez régulièrement ce que l'on peut trouver sur vous</h3>
-
-  			<p>Entrez régulièrement votre nom, email, mobile et adresse sur Google pour vérifier ce qui est indexé publiquement.</p>
-
-  			<p>A partir d'un autre compte Facebook, cherchez vos publications, photos et vidéo vidéos, et vérifiez que ce qui est public doit l'être.</p>
-
-  		</div>
-  	</section><!-- /. Section: #auto-censure -->
-
-  	<!-- Footer -->
-  	<footer>
-
-  		<p>Guide sous <a href="https://github.com/imnotadeveloper/digital-guide/blob/master/LICENSE.md">Licence MIT</a>, fourni <em>tel quel</em> sans garantie d'aucune sorte, explicite ou implicite.</p>
-
-  		<p><a href="https://github.com/imnotadeveloper/digital-guide" class="github"><span>GitHub</span></a></p>
-
-  	</footer><!-- /. Footer -->
-
-  	<script>
-  	// Toggle Menu
-  	window.onload = function() {
-  		var navigation = document.getElementsByTagName("nav")[0];
-  		document.addEventListener("click", function(event) {
-  		  if (!navigation.contains(event.target)) {
-  				navigation.classList.remove("show");
-  		  }
-  			else {
-  				navigation.classList.toggle("show");
-  			}
-  		});
-  	}
-  	</script>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1>Comment sécuriser votre vie numérique&nbsp;?</h1>
+        <h2>Mini-guide de survie digitale</h2>
+      </div>
+    </header>
+    <!-- /. Header -->
+
+    <!-- Navigation -->
+    <nav>
+      <h3 class="burger"><span>Sommaire</span></h3>
+      <ul>
+        <li><a href="#introduction">Pourquoi&nbsp;?</a></li>
+        <li><a href="#vpn"><span class="num">1</span> VPN</a></li>
+        <li><a href="#mots-de-passe"><span class="num">2</span> Mots de passe</a></li>
+        <li><a href="#gestionnaire-de-mdp"><span class="num">3</span> Gestionnaire de mots de passe</a></li>
+        <li><a href="#deux-facteurs"><span class="num">4</span> Authentification à deux-facteurs</a></li>
+        <li><a href="#antivirus-et-maj"><span class="num">5</span> Antivirus et mises-à-jour</a></li>
+        <li><a href="#sauvegarde"><span class="num">6</span> Sauvegarde</a></li>
+        <li><a href="#multi-comptes"><span class="num">7</span> Multiples comptes</a></li>
+        <li><a href="#tier-de-confiance"><span class="num">8</span> Tier de confiance</a></li>
+        <li><a href="#cryptage"><span class="num">9</span> Cryptage</a></li>
+        <li><a href="#cryptage-personnel"><span class="num">10</span> Données sensibles</a></li>
+        <li><a href="#auto-censure"><span class="num">+</span> Données publiques</a></li>
+      </ul>
+    </nav>
+    <!-- /. Navigation -->
+
+    <!-- Section: #introduction -->
+    <section id="introduction">
+      <div class="container">
+        <blockquote>
+          <p><strong><em>«&nbsp;Je n'ai rien à cacher&nbsp;»</em> n'est pas une excuse valable pour vous permettre d'être imprudent.</strong></p>
+        </blockquote>
+        <p>Si vous êtes ni millionnaire, ni un personnage public, ni un criminel international, il est en effet <em>possible</em> qu'aucun hacker ne vous cible personnellement, mais ça ne vous protège pas pour autant.</p>
+        <p>Les pirates ciblent la masse : les <a href="https://www.google.fr/search?tbm=nws&amp;hl=fr&amp;q=vol+massif+de+mots+de+passe">vols de mots de passe</a>, les <a href="https://www.google.fr/search?tbm=nws&amp;hl=fr&amp;q=ransomware">ransomwares</a>, et les campagnes de <a href="https://www.google.fr/search?tbm=nws&amp;hl=fr&amp;q=phishing">phishing</a> visent des millions de personnes à la fois. La probabilité que vous en soyez victime un jour est donc très forte&nbsp;<sup class="ref"><a href="#note1" id="ref1">[1]</a></sup>.</p>
+        <p>Personne n'est à l'abri d'être un jour la cible d'un amoureux éconduit, d'un concurrent jaloux ou d'un ami trop curieux, ça arrive tous les jours, à des dizaines de milliers de personnes.</p>
+        <p>Mon objectif est de vous donner quelques règles simples pour vous éviter par exemple que :</p>
+        <ul>
+          <li>votre identité soit usurpée,</li>
+          <li>vos données soient prises en otage,</li>
+          <li>vos comptes bancaires soient vidés,</li>
+          <li>vos photos privées soient rendues publiques,</li>
+          <li>un <em>stalker</em> débarque chez vous après avoir fouillé votre vie numérique,</li>
+          <li>etc.</li>
+        </ul>
+        <p>Ces recommandations ne constituent en aucun cas un moyen d'échapper à la <abbr title="National Security Agency (USA)">NSA</abbr> ou toute autre organisation gouvernementale ou paragouvernementale&nbsp;<sup class="ref"><a href="#note2" id="ref2">[2]</a></sup>.</p>
+        <p>Je ne suis ni pirate ni ingénieur informatique, mais comme vous, je passe ma vie sur Internet. Les recommandations que je fais ne sont pas très complexes à appliquer, il s'agît surtout de bon sens et de bonnes pratiques. Autant que possible, j'ai essayé d'être ni parano, ni complotiste.</p>
+        <p>Ce guide est forcement imparfait. Certains le trouveront trop léger, et beaucoup le trouveront trop complexe.
+          Selon moi, il s'agît du minimum vital.
+        </p>
+        <!-- Notes -->
+        <div class="notes">
+          <p id="note1">[1]&nbsp;:&nbsp;Il est d'ailleurs fort probable que l'un de vos comptes ai déjà été piraté. En entrant votre email sur <a href="https://haveibeenpwned.com">ce site</a>, vous pourriez-bien découvrir que vos données ont déjà été corrompues.&nbsp;<a href="#ref1" class="retour">&#8617;</a></p>
+          <p id="note2">[2]&nbsp;:&nbsp;Si vous souhaitiez néanmoins sérieusement échapper à des organisations de type <abbr title="National Security Agency (USA)">NSA</abbr> il vous faudrait a minima&nbsp;:&nbsp;bannir l'utilisation de tous les réseaux sociaux, n'utiliser aucun service de stockage cloud, vous connecter sur Internet via le <a href="https://fr.wikipedia.org/wiki/Tor_(réseau)">réseau Tor</a>, créer des <a href="https://www.google.fr/search?q=proxy+chains">chaînes de proxy</a>, vous intéresser à la <a href="https://fr.wikipedia.org/wiki/Cryptographie">Cryptographie</a>, etc.&nbsp;<a href="#ref2" class="retour">&#8617;</a></p>
+        </div>
+        <!-- /. Notes -->
+      </div>
+    </section>
+    <!-- /. Section: #introduction -->
+
+    <!-- Section: #vpn -->
+    <section id="vpn">
+      <div class="container">
+        <h2><span class="num">1</span> Sécurisez votre connexion Internet avec un VPN</h2>
+        <p>N'importe quel Fournisseur d'Accès Internet (FAI) peut vous espionner et enregistrer votre activité.</p>
+        <p>Vous pouvez, <em>a priori</em>, plutôt faire confiance à votre connexion à domicile, au bureau, ou à votre opérateur mobile, mais les connexions wifi publiques sont vraiment très risquées. Et même si le café, l'aéroport ou l'hôtel ne vous espionne pas directement, il souvent possible pour un hacker de surveiller votre activité sur ces réseaux ouverts, et donc de récupérer vos informations confidentielles.</p>
+        <blockquote>
+          <p><strong>Si vous devez utiliser des connexions publiques (cafés, aéroports, hôtels, etc.), utilisez impérativement un <a href="https://fr.wikipedia.org/wiki/Réseau_privé_virtuel">VPN</a> sur votre ordinateur bien sûr, mais aussi sur tous vos appareils mobiles.</strong></p>
+        </blockquote>
+        <p>Un VPN est un système qui chiffre et masque votre activité sur Internet. Ainsi, ni un hacker, ni le fournisseur de votre connexion Internet ne peuvent savoir ce que vous faîtes.</p>
+        <p>Idéalement, il faudrait utiliser un VPN tout le temps, même chez vous.</p>
+        <p>Attention cependant, le VPN pourrait lui même enregistrer vos informations personnelles.
+          Il faut donc impérativement veiller à utiliser un VPN de confiance et payant&nbsp;<sup class="ref"><a href="#note3" id="ref3">[3]</a></sup>.
+        </p>
+        <p>Voici une sélection de quelques VPN : </p>
+        <ul>
+          <li><a href="https://www.hidemyass.com">HideMyAss</a></li>
+          <li><a href="https://www.privateinternetaccess.com">PIA (Private Internet Access)</a></li>
+          <li><a href="https://www.expressvpn.com/">ExpressVPN</a></li>
+          <li><a href="https://www.ipvanish.com">IPVanish</a></li>
+          <li><a href="https://www.purevpn.fr">PureVPN</a></li>
+          <li><a href="http://www.cyberghostvpn.com">CyberGhost</a></li>
+          <li><a href="https://nordvpn.com">NordVPN</a></li>
+          <li><a href="https://www.goldenfrog.com/vyprvpn">VyprVPN</a></li>
+        </ul>
+        <!-- Notes -->
+        <div class="notes">
+          <p id="note3">[3]&nbsp;:&nbsp;Car <em>«&nbsp;Si c’est gratuit, c’est que vous êtes le produit.&nbsp;»</em>&nbsp;<a href="#ref3" class="retour">&#8617;</a></p>
+        </div>
+        <!-- /. Notes -->
+      </div>
+    </section>
+    <!-- /. Section: #vpn -->
+
+    <!-- Section: #mots-de-passe -->
+    <section id="mots-de-passe">
+      <div class="container">
+        <h2><span class="num">2</span> Créez des mots de passe longs et uniques</h2>
+        <blockquote>
+          <p><strong>Générez des mots de passe complexes de 9 caractères minimum</strong></p>
+        </blockquote>
+        <p>Une des techniques courante pour trouver un mot de passe est de tester toutes les combinaisons possibles&nbsp;<sup class="ref"><a href="#note4" id="ref4">[4]</a></sup>. </p>
+        <p><strong>En dessous de 9 caractères, il faut seulement quelques heures pour tester toutes les combinaisons possibles d'un mot de passe</strong>&nbsp;<sup class="ref"><a href="#note5" id="ref5">[5]</a></sup>.<br/>
+          A partir de 9 caractères il faut théoriquement plusieurs mois pour <em>casser</em> votre mot de passe.
+        </p>
+        <p>Attention cependant, ça n'est valable que si votre mot de passe contient à la fois des lettres minuscules et majuscules, des chiffres et des symboles. Car pour <em>casser</em> un mot de passe de 9 caractères composé seulement de lettres, il suffit quelques-minutes.</p>
+        <p>Voici quelques générateurs de mots de passes en ligne : </p>
+        <ul>
+          <li><a href="http://www.donnemoiunmotdepasse.fr">Donne moi un mot de passe</a></li>
+          <li><a href="https://www.generateurdemotdepasse.com">Générateur de mot de passe</a></li>
+          <li><a href="http://passwordsgenerator.net">Password generator</a></li>
+        </ul>
+        <blockquote>
+          <p><strong>Utilisez des mots de passe uniques pour chaque service</strong></p>
+        </blockquote>
+        <p>Une autre manière courante de récupérer des mots de passe pour les hackers est d'acheter des mots de passe volés sur d'autres sites.</p>
+        <p>Domino's Pizza, Playstation, Uber, eBay, UPS, Yahoo, Evernote, Nintendo, Linkedin par exemple&nbsp;<sup class="ref"><a href="#note6" id="ref6">[6]</a></sup> ont tous connus des vols massifs de données. Si vous aviez par exemple le même mot de passe sur Linkedin et sur Gmail quelqu'un pourrait s'introduire dans votre boite mail.</p>
+        <p>Il faut bien imaginer que tout cela se fait à grande échelle. Les pirates achètent des énormes <em>packs</em> de mots de passe volés, et les testent systématiquement sur tous les sites qui les intéressent : Amazon, Google, Skype, Paypal, etc.</p>
+        <p>Ce n'est donc pas simplement une recommandation. Il est absolument nécessaire que vous ayez des mots de passe uniques sur chaque site. Sinon, toutes vos données personnelles pourraient finir par être compromises.</p>
+        <!-- Notes -->
+        <div class="notes">
+          <p id="note4">[4]&nbsp;:&nbsp;<a href="https://fr.wikipedia.org/wiki/Attaque_par_force_brute">Attaque par force brute</a> ou <a href="https://fr.wikipedia.org/wiki/Attaque_par_dictionnaire">Attaque par dictionnaire</a>&nbsp;<a href="#ref5" class="retour">&#8617;</a></p>
+          <p id="note5">[5]&nbsp;:&nbsp;Vous pouvez tester le temps théorique qu'il faudrait pour craquer vos mots de passe sur <a href="https://howsecureismypassword.net">ce site</a>&nbsp;<a href="#ref6" class="retour">&#8617;</a></p>
+          <p id="note6">[6]&nbsp;:&nbsp;Une liste des principaux vols massifs de données <a href="https://en.wikipedia.org/wiki/List_of_data_breaches">ici</a>&nbsp;<a href="#ref6" class="retour">&#8617;</a></p>
+        </div>
+        <!-- /. Notes -->
+      </div>
+    </section>
+    <!-- /. Section: #mots-de-passe -->
+
+    <!-- Section: #gestionnaire-de-mdp -->
+    <section id="gestionnaire-de-mdp">
+      <div class="container">
+        <h2><span class="num">3</span> Utilisez un gestionnaire de mots de passe</h2>
+        <p>Mails, réseaux sociaux, programmes de fidélité, finances, applications mobiles, etc. nous avons tous au minimum plusieurs dizaines de mots de passe, et il n'est pas humainement possible de tous les retenir (surtout quand vos mots de passe ressemblent à ça&nbsp;:&nbsp;<span class="code">2=4Dq7h!N9</span>).</p>
+        <p>La solution que nous utilisons en général par défaut est donc de laisser notre navigateur Internet se souvenir de nos mots de passe. C'est une assez mauvaise habitude.</p>
+        <p>Même si la plupart des navigateurs <em>cryptent</em> vos mots de passe, ils sont affichés en clair à partir du moment où l'ordinateur et le navigateur sont ouverts.</p>
+        <p>Quiconque s'introduirait sur votre machine pourrait donc à sa guise se connecter à tous vos services en ligne.</p>
+        <p>Ensuite, les navigateurs ne retiennent que les mots de passe utilisés sur des pages Internet. Au fil du temps, vous avez donc des mots de passe partout : dans vos navigateurs Internet au bureau à la maison et sur mobile, dans votre système d'exploitation pour les accès wifi, dans un fichier «&nbsp;notes&nbsp;» pour les applications sur Smartphone, sur un carnet papier pour certains accès professionnels, etc.</p>
+        <p>Ce système de gestion chaotique est trop complexe pour qu'il soit fiable et pérenne. <em>Comment ferez-vous dans 5 ans&nbsp;? Et quand vous changerez d'ordinateur&nbsp;?</em> Vous laissez forcement trainer des informations sensibles à de très nombreux endroits, et pour vous faciliter la vie, vous utilisez très probablement les mêmes mots de passe sur de nombreux services.</p>
+        <blockquote>
+          <p><strong>Utilisez un gestionnaire de mots de passe pour sécuriser en un seul lieu tous vos mots de passe, vos adresses, vos numéros de téléphones, vos IBANs, vos cartes de fidélités, etc.</strong></p>
+        </blockquote>
+        <p>Les gestionnaires de mots de passe chiffrent l'ensemble de ces données sensibles. Il vous suffit alors d'entrer votre mot de passe principal pour tout débloquer.</p>
+        <p>C'est bien sûr la faille de ce système. Si quelqu'un entre sur votre machine (physiquement ou virtuellement) et que votre mot de passe principal est compromis, c'est toute votre vie numérique qui peut être volée.</p>
+        <p>Ce n'est pas une solution parfaite, mais c'est pragmatique, simple et relativement sécurisé.</p>
+        <p>Choisissez un mot de passe très complexe pour <em>encrypter</em> l'accès à votre gestionnaire de mot de passe (une quinzaine de caractères), ne le notez-pas, retenez-le.</p>
+        <p>Supprimez ensuite tous vos mots de passe sur Chrome, Firefox, Safari ou Edge, désactivez l'enregistrement automatique des mots de passe, et n'utilisez plus que votre gestionnaire de mot de passe.</p>
+        <p>Les gestionnaires de mot de passe permettent en général de générer automatiquement des mots de passes complexes pour chaque accès. C'est donc un problème de moins à se préoccuper.</p>
+        <p>Voici une sélection de quelques Gestionnaires de mots de passe : </p>
+        <ul>
+          <li><a href="https://www.dashlane.com">Dashlane</a></li>
+          <li><a href="https://www.lastpass.com">LastPass</a></li>
+          <li><a href="https://keepersecurity.com">Keeper </a></li>
+          <li><a href="https://1password.com">1Password</a></li>
+          <li><a href="https://www.truekey.com">True Key</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- /. Section: #gestionnaire-de-mdp -->
+
+    <!-- Section: #deux-facteurs -->
+    <section id="deux-facteurs">
+      <div class="container">
+        <h2><span class="num">4</span> Activez l'authentification à deux-facteurs</h2>
+        <p>De nombreux types d’attaque permettent de trouver vos mots de passe. Si vous êtes ciblés personnellement, l'<em><a href="https://fr.wikipedia.org/wiki/Ingénierie_sociale_(sécurité_de_l%27information)">ingénierie sociale</a></em> est par exemple l'une des méthodes les plus redoutable. </p>
+        <p>Le <em>social engineering</em> est le fait d'utiliser votre ignorance ou votre crédulité pour voler vos informations personnelles. Cela peut se concrétiser par exemple (parmi des centaines d'autres techniques possibles) par un faux mail envoyé de la part de votre responsable informatique pour vous demander de changer votre de mot de passe&nbsp;<sup class="ref"><a href="#note7" id="ref7">[7]</a></sup>. C'est par ce genre de techniques par exemple que les <a href="https://www.google.fr/search?tbm=nws&amp;hl=fr&amp;q=hillary+clinton+john+podesta+phishing">emails d'Hillary Clinton</a> auraient été volés.</p>
+        <blockquote>
+          <p><strong>Une des seules façons de vous protéger face à un vol de mot de passe est l'authentification à deux-facteurs.</strong><br/>
+            Vous devez impérativement activer cette fonctionnalité sur tous vos comptes sensibles.
+          </p>
+        </blockquote>
+        <p>Concrètement, une fois l'authentification à 2 facteurs activée, à chaque fois que vous vous connectez depuis un nouvel appareil, vous recevez un code de sécurité (par SMS, ou affiché sur votre mobile) pour valider votre accès. </p>
+        <p>Voici des infos pour configurer <em>2-Step Verification</em> sur les principaux services en ligne : </p>
+        <ul>
+          <li><a href="https://www.google.com/intl/fr/landing/2step/">Google</a></li>
+          <li><a href="https://support.apple.com/fr-fr/HT204915">Apple</a></li>
+          <li><a href="https://support.microsoft.com/fr-be/help/12408/microsoft-account-about-two-step-verification">Microsoft</a></li>
+          <li><a href="https://fr-fr.facebook.com/help/148233965247823">Facebook</a></li>
+          <li><a href="https://www.amazon.fr/gp/help/customer/display.html?nodeId=202025410">Amazon</a></li>
+          <li><a href="https://www.dropbox.com/fr/help/security/enable-two-step-verification">Dropbox</a></li>
+        </ul>
+        <p><em>N'oubliez pas votre banque bien sûr&nbsp;!</em></p>
+        <p>C'est une contrainte supplémentaire, mais c'est là aussi absolument nécessaire pour des comptes aussi sensibles.</p>
+        <p>J'utilise personnellement <a href="https://support.google.com/accounts/answer/1066447?hl=fr">Google Authenticator</a> dès que c'est possible. C'est selon moi plus pratique, fiable et rapide que les SMS.</p>
+        <p>Lorsque vous activez l'authentification à 2 facteurs, ont vous propose en général de générer des <em>clés de secours</em> pour le cas ou vous perdriez votre mobile. Si vous avez opté pour un <a href="#gestionnaire-de-mdp">gestionnaire de mots de passe</a>, c'est le bon endroit pour y stocker ces clés.</p>
+        <!-- Notes -->
+        <div class="notes">
+          <p id="note7">[7]&nbsp;:&nbsp;Voir <a href="https://fr.wikipedia.org/wiki/Hameçonnage">Hameçonnage ou Phishing</a>&nbsp;<a href="#ref7" class="retour">&#8617;</a></p>
+        </div>
+        <!-- /. Notes -->
+      </div>
+    </section>
+    <!-- /. Section: #deux-facteurs -->
+
+    <!-- Section: #antivirus-et-maj -->
+    <section id="antivirus-et-maj">
+      <div class="container">
+        <h2><span class="num">5</span> Installez un antivirus et activez les mises-à-jour automatiques</h2>
+        <p>C'est un des conseils les plus répandus, je ne vais donc pas m'attarder là dessus. Mais là aussi c'est très important.</p>
+        <p>La sécurité numérique est un gigantesque jeu du chat et la souris à l'échelle mondiale entre les hackers, les agences gouvernementales et les services en ligne.</p>
+        <p>Les services numériques mettent donc à jour en permanence leurs outils au fur et à mesure de la découverte de failles de sécurité.</p>
+        <p>Nous n'aimons pas toujours laisser la main à Microsoft, Apple, Google ou des antivirus pour qu'ils fassent directement des modifications sur nos appareils, mais c'est pourtant une des façons les plus efficace de se protéger.</p>
+        <blockquote>
+          <p><strong>Installez un antivirus</strong> (même sur macOS et Android) <strong>et activez les mises à jours automatiques sur tous vos appareils.</strong></p>
+        </blockquote>
+        <p>Voici quelques guides pour activer les mises-à-jour automatiques : </p>
+        <ul>
+          <li><a href="https://support.microsoft.com/fr-ch/help/15081/windows-turn-on-automatic-app-updates">Windows</a></li>
+          <li><a href="https://support.google.com/googleplay/answer/113412?hl=fr">Android</a></li>
+          <li><a href="https://support.apple.com/fr-fr/HT201541">macOS</a></li>
+          <li><a href="https://support.apple.com/fr-fr/HT202180">iOS</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- /. Section: #antivirus-et-maj -->
+
+    <!-- Section: #sauvegarde -->
+    <section id="sauvegarde">
+      <div class="container">
+        <h2><span class="num">6</span> Sauvegardez vos données</h2>
+        <p>Je ne m'attarderais pas non plus là-dessus tellement il est évident qu'il faut impérativement sauvegarder régulièrement vos données.</p>
+        <p>Regardez du côté de <a href="https://support.apple.com/fr-fr/HT201250">Time Machine</a> sous MacOS et du côté de l'<a href="https://support.microsoft.com/fr-fr/help/17128/windows-8-file-history">Historique des fichiers</a> sous Windows.</p>
+        <p><strong>La question de la sauvegarde de vos données dans le Cloud est très sensible.</strong> C'est à chacun de peser le pour et le contre.</p>
+        <p>Vos données sur Google Drive, Dropbox et iCloud, sont aussi sécurisées que vos comptes sur ces services. Si votre <a href="#mots-de-passe">mot de passe est unique et complexe</a>, et que vous avez activé l'<a href="#deux-facteurs">authentification à 2 facteurs</a>. Vos données sont <em>relativement</em> bien protégées contre un hacker isolé.</p>
+        <p>En revanche, c'est <strong>une porte d'accès directe pour les agences fédérales américaines</strong>&nbsp;<sup class="ref"><a href="#note8" id="ref8">[8]</a></sup>.</p>
+        <p>Tout ce qui est très sensible ne devrait pas s'y trouver : vos mots de passes, vos documents d'identité, vos photos coquines, etc.</p>
+        <!-- Notes -->
+        <div class="notes">
+          <p id="note8">[8]&nbsp;:&nbsp;<a href="http://fortune.com/2017/05/09/snowden-danger-of-cloud/">Edward Snowden déclare qu'utiliser des services Cloud est à vos risques et périls</a>&nbsp;<a href="#ref8" class="retour">&#8617;</a></p>
+        </div>
+        <!-- /. Notes -->
+      </div>
+    </section>
+    <!-- /. Section: #sauvegarde -->
+
+    <!-- Section: #multi-comptes -->
+    <section id="multi-comptes">
+      <div class="container">
+        <h2><span class="num">7</span> Gérez plusieurs comptes mail et Facebook</h2>
+        <p>Vos comptes Facebook et Google sont souvent requis pour accéder à des services secondaires tels que Netflix, Airbnb, Instagram ou Uber.</p>
+        <p>Si c'est effectivement très pratique et rapide, au bout de quelques-années on se retrouve à avoir autorisé l'accès à nos données personnelles à des dizaines de services plus ou moins éthiques et sécurisés.</p>
+        <p>Est-il vraiment important de donner notre identité complète et toute notre liste d'amis à Tinder, Tripadvisor, Spotify ou Pinterest&nbsp;?</p>
+        <blockquote>
+          <p><strong>Vous ne devriez donner l'accès à vos comptes Facebook et Google principaux que lorsque c'est absolument nécessaire.</strong> Pour tous les services où l'anonymat est possible, vous devriez utiliser des comptes secondaires.</p>
+        </blockquote>
+        <p>En plus de sécuriser vos données personnelles, avoir 2 comptes pour Facebook et Google permet aussi de pouvoir nous exprimer plus librement et anonymement et d'éviter le SPAM ou l'envahissement des notifications sur nos comptes principaux.</p>
+        <p>Idéalement toutes les quelques années, on remplacera nos comptes secondaires.</p>
+        <p>Si vous ne souhaitez pas utiliser de comptes secondaires&nbsp;:</p>
+        <ul class="multiligne">
+          <li>Quand cela est possible, créez vos accès sur des nouveaux services en renseignant votre email plutôt qu'avec une connexion Facebook ou Google,</li>
+          <li>Limitez au maximum les autorisations que vous donnez. Il est par exemple souvent possible de décocher l'accès à la liste d'amis lorsque vous vous authentifiez par Facebook&nbsp;<sup class="ref"><a href="#note9" id="ref9">[9]</a></sup>.</li>
+        </ul>
+        <!-- Notes -->
+        <div class="notes">
+          <p id="note9">[9]&nbsp;:&nbsp;Vos amis sont une excellente porte d'entrée pour le <a href="https://fr.wikipedia.org/wiki/Hameçonnage">phishing</a>, le <a href="https://fr.wikipedia.org/wiki/Ransomware">chantage</a> et l'<a href="https://fr.wikipedia.org/wiki/Ingénierie_sociale_(sécurité_de_l%27information)">ingénierie sociale</a>&nbsp;<a href="#ref9" class="retour">&#8617;</a></p>
+        </div>
+        <!-- /. Notes -->
+      </div>
+    </section>
+    <!-- /. Section: #multi-comptes -->
+
+    <!-- Section: #tier-de-confiance -->
+    <section id="tier-de-confiance">
+      <div class="container">
+        <h2><span class="num">8</span> Utilisez des tiers de confiance pour les paiements</h2>
+        <blockquote>
+          <p><strong>Dès que c'est possible, achetez sur <a href="https://www.amazon.fr">Amazon</a> plutôt que sur un site marchant directement ou payez via <a href="https://www.paypal.fr">Paypal</a>, <a href="https://www.apple.com/fr/apple-pay/">Apple Pay</a> ou <a href="https://www.google.com/wallet/">Google Wallet</a>.</strong></p>
+        </blockquote>
+        <p>Non seulement ces services sont reconnus pour être parmi les plus sécurisés, mais ils offrent aussi des politiques de protection du consommateur très avantageuses. Si un produit ou un service n'est pas livré ou n'est pas conforme, il sera très facile de vous faire rembourser, souvent même sans avoir à vous justifier.</p>
+        <p>Bien sûr en passant encore et encore par ses services, nous renforçons toujours plus leur position dominante. Mais entre deux maux, il faut choisir le moindre. Pour moi c'est limpide, la sécurité des transactions passe très loin devant le militantisme, le protectionnisme économique et les postures philosophiques (Laissons ces sujets à nos dirigeants).</p>
+        <p>Evitez aussi d'enregistrer vos cartes bancaires sur des services secondaires comme Netflix, Booking, Agoda, Airbnb, etc. Au minimum, ce sera plus facile d'arrêter un prélèvement automatique via Paypal ou Apple Pay par exemple, mais vos transactions seront aussi <em>probablement</em> plus sécurisées.</p>
+      </div>
+    </section>
+    <!-- /. Section: #tier-de-confiance -->
+
+    <!-- Section: #cryptage -->
+    <section id="cryptage">
+      <div class="container">
+        <h2><span class="num">9</span> Cryptez vos disques durs et vos conversations</h2>
+        <p>De nombreux services et outils proposent désormais de crypter nativement vos données et vos messages. Encore faut-il l'avoir activé.</p>
+        <blockquote>
+          <p><strong>Activez le cryptage partout où c'est possible</strong></p>
+        </blockquote>
+        <p>Pour votre ordinateur, activez <a href="https://support.apple.com/fr-fr/HT204837">File Vault</a> sur macOS ou <a href="https://technet.microsoft.com/fr-fr/library/cc732774(v=ws.11).aspx">BitLocker Drive Encryption</a> sur Windows.</p>
+        <p>Pour votre mobile, utilisez simplement votre identifiant Apple pour que vos appareils iOS soit cryptés. Sur Android ça dépend du constructeur, mais c'est <a href="https://docs.microsoft.com/fr-fr/intune-user-help/encrypt-your-device-android">généralement possible</a> aussi.</p>
+        <p>C'est aussi possible pour de nombreuses applications de messagerie comme <a href="https://support.google.com/mail/answer/6330403?hl=fr">Gmail</a>, <a href="https://www.facebook.com/help/messenger-app/811527538946901">Messenger</a>, <a href="https://support.skype.com/fr/faq/FA31/est-ce-que-skype-utilise-le-chiffrement">Skype</a>, <a href="https://faq.whatsapp.com/fr/general/28030015">WhatsApp</a>, <a href="https://help.line.me/line/ios/categoryId/20000012/3/pc?lang=en#20000263">Line</a>, <a href="http://admin.wechat.com/wiki/index.php?title=Message_Cryptography_FAQs">WeChat</a>, etc. mais il faut vous renseigner au cas par cas, selon votre usage personnel.</p>
+      </div>
+    </section>
+    <!-- /. Section: #cryptage -->
+
+    <!-- Section: #cryptage-personnel -->
+    <section id="cryptage-personnel">
+      <div class="container">
+        <h2><span class="num">10</span> Mettez à l'abri vos données sensibles</h2>
+        <p>Si vous avez besoin de protéger plus fortement des données privées comme un dossier médical, des photos coquines, des Bitcoins, une double vie, les coordonnées GPS d'une capsule temporelle, etc. vous devriez fortement envisager de vous construire un <a href="https://fr.wikipedia.org/wiki/Coffre-fort_numérique">Coffre-fort numérique</a>.</p>
+        <p>Il existe des logiciels de cryptage assez faciles à utiliser et reconnus comme <em>a priori</em> fiables. Par exemple : </p>
+        <ul>
+          <li><a href="https://www.veracrypt.fr/">VeraCrypt</a></li>
+          <li><a href="https://www.ciphershed.org">CipherShed</a></li>
+          <li><a href="https://diskcryptor.net/">DiskCryptor</a></li>
+          <li><a href="https://gitlab.com/cryptsetup/cryptsetup/">LUKS</a></li>
+        </ul>
+        <p>Renseignez-vous.</p>
+      </div>
+    </section>
+    <!-- /. Section: #cryptage-personnel -->
+
+    <!-- Section: #auto-censure -->
+    <section id="auto-censure">
+      <div class="container">
+        <h2><span class="num">+</span> Soyez attentif à ce que vous publiez</h2>
+        <h3>Ne publiez pas d'informations privées</h3>
+        <p>Je suis parti du principe que vous n'étalez pas votre vie privée en public. Ce n'est pas donc pas l'objet de ce guide, mais je vous recommande de ne pas publier pas votre localisation ou vos coordonnées personnelles et de masquer votre liste d'amis.</p>
+        <h3>Vérifiez régulièrement ce que l'on peut trouver sur vous</h3>
+        <p>Entrez régulièrement votre nom, email, mobile et adresse sur Google pour vérifier ce qui est indexé publiquement.</p>
+        <p>A partir d'un autre compte Facebook, cherchez vos publications, photos et vidéo vidéos, et vérifiez que ce qui est public doit l'être.</p>
+      </div>
+    </section>
+    <!-- /. Section: #auto-censure -->
+
+    <!-- Footer -->
+    <footer>
+      <p>Guide sous <a href="https://github.com/imnotadeveloper/digital-guide/blob/master/LICENSE.md">Licence MIT</a>, fourni <em>tel quel</em> sans garantie d'aucune sorte, explicite ou implicite.</p>
+      <p><a href="https://github.com/imnotadeveloper/digital-guide" class="github"><span>GitHub</span></a></p>
+    </footer>
+    <!-- /. Footer -->
+
+    <script>
+      // Toggle Menu
+      window.onload = function() {
+      	var navigation = document.getElementsByTagName("nav")[0];
+      	document.addEventListener("click", function(event) {
+      	  if (!navigation.contains(event.target)) {
+      			navigation.classList.remove("show");
+      	  }
+      		else {
+      			navigation.classList.toggle("show");
+      		}
+      	});
+      }
+    </script>
 
   </body>
 </html>
