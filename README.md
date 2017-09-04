@@ -1,19 +1,10 @@
 # Digital Guide
-Mini-guide de survie digitale
+**How to secure your digital life?**  
+Mini-guide to digital survival
 
-> *« Je n'ai rien à cacher »* n'est pas une excuse valable pour vous permettre d'être imprudent.
+> *“I have nothing to hide”* is not a valid excuse to allow you to be reckless.
 
-**Sommaire**
+Versions : 
 
-- Pourquoi ?
-- VPN
-- Mots de passe
-- Gestionnaire de mots de passe
-- Authentification à deux-facteurs
-- Antivirus et mises-à-jour
-- Sauvegarde
-- Multiples comptes
-- Tier de confiance
-- Cryptage
-- Données sensibles
-- Données publiques
+- English: https://digitalguide.co
+- Français: https://digitalguide.co/fr/
