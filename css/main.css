@@ -328,6 +328,24 @@ footer a.github:hover:after {
 
 
 
+/* Lang
+/* -------------------------------------------------------- */
+.lang {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #78909C; /* Blue Grey 400 */
+  background-color: rgba(0,0,0,.75); /* Black .75 */
+}
+.lang a {
+  color: #FFF;
+}
+.lang a:hover {
+  color: #4FC3F7; /* Light Blue 300 */
+}
+
+
+
 /* Component: blockquote
 /* -------------------------------------------------------- */
 blockquote {
