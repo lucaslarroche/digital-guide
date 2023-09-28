@@ -8,3 +8,4 @@ Versions :
 
 - English: https://digitalguide.co
 - Français: https://digitalguide.co/fr/
+- Türkçe: https://digitalguide.co/tr/
