@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+
+    <!-- Settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO -->
+    <title>Digital Guide: How to secure your digital life?</title>
+    <meta name="description" content="Mini-guide to digital survival. VPN, Passwords, Password Manager, Two-factor authentication, Antivirus and updates, Backup, Multiple accounts, Trusted third parties, Encryption, Sensitive data">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="https://github.com/imnotadeveloper" />
+    <meta name="copyright" content="https://github.com/imnotadeveloper/digital-guide/blob/master/LICENSE.md" />
+    <link rel="alternate" hreflang="en" href="../">
+    <link rel="alternate" hreflang="fr" href="../fr">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/fav/favicon-16x16.png">
+    <link rel="manifest" href="../img/fav/manifest.json">
+    <link rel="mask-icon" href="../img/fav/safari-pinned-tab.svg" color="#40c4ff">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <meta name="msapplication-config" content="../img/fav/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Styles -->
+    <link href="../css/main.min.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-38766871-5', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1>Dijital hayatınızı nasıl güvence altına alabilirsiniz?</h1>
+        <h2>Dijital hayatta kalma mini rehberi</h2>
+      </div>
+    </header>
+    <!-- /. Header -->
+
+    <!-- Navigation -->
+    <nav>
+      <h3 class="burger"><span>Özet</span></h3>
+      <ul>
+        <li><a href="#introduction">Neden?</a></li>
+        <li><a href="#vpn"><span class="num">1</span> VPN</a></li>
+        <li><a href="#passwords"><span class="num">2</span> Şifreler</a></li>
+        <li><a href="#password-manager"><span class="num">3</span> Şifre Yöneticisi</a></li>
+        <li><a href="#two-factor"><span class="num">4</span> İki faktörlü kimlik doğrulama</a></li>
+        <li><a href="#antivirus-and-updates"><span class="num">5</span> Antivirüs ve güncellemeler</a></li>
+        <li><a href="#backup"><span class="num">6</span> Yedekleme</a></li>
+        <li><a href="#multiple-accounts"><span class="num">7</span> Birden fazla hesap</a></li>
+        <li><a href="#trusted-third-parties"><span class="num">8</span> Güvenilir üçüncü taraflar</a></li>
+        <li><a href="#encryption"><span class="num">9</span> Şifreleme</a></li>
+        <li><a href="#sensitive-data"><span class="num">10</span> Hassas veriler</a></li>
+        <li><a href="#public-data"><span class="num">+</span> Kamu verileri</a></li>
+      </ul>
+    </nav>
+    <!-- /. Navigation -->
+
+    <!-- Section: #introduction -->
+    <section id="introduction">
+      <div class="container">
+        <blockquote>
+            <p><strong><em>"Saklayacak bir şeyim yok"</em> düşüncesi, dikkatsiz davranmanız için geçerli bir mazeret değildir.</strong></p>
+        </blockquote>
+        <p>Eğer bir milyoner, kamusal bir figür ya da uluslararası bir suçlu değilseniz, gerçekten de hiçbir hacker'ın sizi kişisel olarak hedef almaması mümkündür, ancak bu sizi korumaz.</p>
+        <p>Bilgisayar korsanlarının hedef kitlesi: <a href="https://www.google.com/search?tbm=nws&amp;hl=tr&amp;q=büyük+veri+ihlali">veri ihlali</a>, <a href="https://www.google.com/search?tbm=nws&amp;hl=tr&amp;q=fidye+yazılım">fidye yazılımları</a> ve <a href="https://www.google.com/search?tbm=nws&amp;hl=tr&amp;q=kimlik+avı">kimlik avı atakları</a> aynı anda milyonlarca kişiyi hedef alıyor. Bu nedenle, her gün mağdur olma olasılığınız çok yüksektir&nbsp;<sup class="ref"><a href="#note1" id="ref1">[1]</a></sup>.</p>
+        <p>Hiç kimse, reddedilmiş bir sevgili, kıskanç bir rakip veya meraklı bir arkadaşın hedefi olmaktan güvende değildir, her gün on binlerce insanın başına geliyor.</p>
+        <p>Amacım, size örneğin şunları önlemenize yardımcı olacak birkaç basit kural vermek:</p>
+        <ul>
+            <li>kimliğiniz kötüye kullanılır,</li>
+            <li>verileriniz rehin alınır,</li>
+            <li>banka hesaplarınız boşaltılır,</li>
+            <li>özel fotoğraflarınız kamuya açılır,</li>
+            <li>bir takipçi dijital hayatınızı araştırdıktan sonra evinize gelir,</li>
+            <li>vb.</li>
+        </ul>
+        <p>Bu öneriler, <abbr title="Ulusal Güvenlik Ajansı (ABD)">NSA</abbr> veya herhangi bir devlet veya devlet dışı kuruluştan kaçmanın bir yolu değildir&nbsp;<sup class="ref"><a href="#note2" id="ref2">[2]</a></sup>.</p>
+        <p>Ben bir hacker veya bilgisayar mühendisi değilim, ancak sizin gibi ben de hayatımı internet üzerinde geçiriyorum. Yaptığım öneriler uygulanması çok karmaşık olmayan, özellikle iyi niyet ve iyi uygulamalarla çerçevelenmiş önerilerdir. Mümkün olduğunca paranoid veya komplo teorisyeni olmamaya çalıştım.</p>
+        <p>Bu kılavuz kesinlikle kusurludur. Bazıları çok hafif bulacak, birçok kişi ise çok karmaşık bulacaktır. Benim görüşüme göre, bu minimum yaşam seviyesidir.</p>
+        <!-- Notlar -->
+        <div class="notes">
+          <p id="note1">[1]:&nbsp;Ayrıca hesaplarınızın birinin zaten hacklendiği çok olasıdır. <a href="https://haveibeenpwned.com">Bu siteye</a> e-postanızı girerek, verilerinizin zaten bozulduğunu keşfedebilirsiniz.&nbsp;<a href="#ref1" class="back">&#8617;</a></p>
+          <p id="note2">[2]:&nbsp;<abbr title="Ulusal Güvenlik Ajansı (ABD)">NSA</abbr> gibi kuruluşlardan ciddi şekilde kaçınmak istiyorsanız, en azından: tüm sosyal ağların kullanımını yasaklayın, hiçbir bulut depolama hizmeti kullanmayın, <a href="https://tr.wikipedia.org/wiki/Tor_(anonimlik_a%C4%9F%C4%B1)">Tor ağı</a> üzerinden internete bağlanın, <a href="https://www.google.com/search?q=proxy+chains">proxy zincirleri</a> oluşturun, ilginizi <a href="https://tr.wikipedia.org/wiki/Kriptografi">şifreleme</a>'ye dayandırın, vb.&nbsp;<a href="#ref2" class="back">&#8617;</a></p>
+        </div>
+        <!-- /. Notes -->
+      </div>
+    </section>
+    <!-- /. Section: #introduction -->
+
+    <!-- Section: #vpn -->
+    <section id="vpn">
+      <div class="container">
+        <h2><span class="num">1</span> İnternet bağlantınızı bir VPN ile güvence altına alın</h2>
+        <p>Herhangi bir İnternet Servis Sağlayıcısı (ISS) sizi izleyebilir ve aktivitenizi kaydedebilir.</p>
+        <p>Evde, ofiste veya mobil operatörünüzdeki bağlantınıza önceden güvenebilirsiniz, ancak halka açık WIFI bağlantıları gerçekten çok risklidir. Ve siber, havaalanı veya otel doğrudan sizi izlemese bile, bir hacker'ın bu açık ağlarda aktivitenizi izlemesi ve dolayısıyla gizli bilgilerinizi alması sık sık mümkündür.</p>
+        <blockquote>
+          <p><strong>Halka açık bağlantıları (siber, havaalanları, oteller vb.) kullanmak zorunda kalırsanız, bilgisayarınızda ve tüm mobil cihazlarınızda bir <a href="https://tr.wikipedia.org/wiki/Virtual_private_network">VPN</a> kullanmanız gerekmektedir.</strong></p>
+        </blockquote>
+        <p>VPN, İnternet'teki aktivitenizi şifreler ve gizler. Böylece, ne bir hacker ne de İnternet bağlantınızın sağlayıcısı ne yaptığınızı bilemez.</p>
+        <p>İdeal olarak, evde bile bir VPN kullanmanız gerekiyor.</p>
+        <p>Ancak dikkatli olun, VPN bile kişisel bilgilerinizi kaydedebilir. Bu nedenle, güvenilir ve ücretli bir VPN kullanmanız önemlidir&nbsp;<sup class="ref"><a href="#note3" id="ref3">[3]</a></sup>.
+        </p>
+        <p>Burada birkaç VPN seçeneği:</p>
+        <ul>
+          <li><a href="https://www.hidemyass.com">HideMyAss</a></li>
+          <li><a href="https://www.privateinternetaccess.com">PIA (Private Internet Access)</a></li>
+          <li><a href="https://www.expressvpn.com">ExpressVPN</a></li>
+          <li><a href="https://www.ipvanish.com">IPVanish</a></li>
+          <li><a href="https://www.purevpn.com">PureVPN</a></li>
+          <li><a href="http://www.cyberghostvpn.com">CyberGhost</a></li>
+          <li><a href="https://nordvpn.com">NordVPN</a></li>
+          <li><a href="https://www.goldenfrog.com/vyprvpn">VyprVPN</a></li>
+        </ul>
+        <!-- Notlar -->
+        <div class="notes">
+          <p id="note3">[3]:&nbsp;çünkü "Ücretsizse, sen ürünsündür."&nbsp;<a href="#ref3" class="back">&#8617;</a></p>
+        </div>
+        <!-- /. Notlar -->
+      </div>
+    </section>
+    <!-- /. Section: #vpn -->
+
+    <!-- Section: #passwords -->
+    <section id="passwords">
+      <div class="container">
+        <h2><span class="num">2</span> Uzun ve benzersiz şifreler oluşturun</h2>
+        <blockquote>
+          <p><strong>En az 9 karakterden oluşan karmaşık şifreler oluşturun</strong></p>
+        </blockquote>
+        <p>Bir şifreyi bulmak için yaygın tekniklerden biri, tüm olası kombinasyonları test etmektir&nbsp;<sup class="ref"><a href="#note4" id="ref4">[4]</a></sup>.</p>
+        <p><strong>9 karakterden az ise, bir şifrenin tüm olası kombinasyonlarını test etmek sadece birkaç saat sürer</strong>&nbsp;<sup class="ref"><a href="#note5" id="ref5">[5]</a></sup>.<br/>
+          9 karakterden itibaren, şifrenizi kırmak teorik olarak birkaç ay sürer.
+        </p>
+        <p>Ancak dikkat edin, şifreniz hem küçük hem de büyük harfler, sayılar ve semboller içeriyorsa geçerlidir. Çünkü sadece harflerden oluşan 9 karakterlik bir şifreyi <em>kırmak</em> için birkaç dakika yeterlidir.</p>
+        <p>İşte bazı online şifre oluşturucular:</p>
+        <ul>
+          <li><a href="https://passwordsgenerator.net">Güçlü Rastgele Şifre Oluşturucu</a></li>
+          <li><a href="https://identitysafe.norton.com/password-generator/">Norton Şifre Oluşturucu</a></li>
+          <li><a href="https://www.random.org/passwords/">Şifre oluşturucu</a></li>
+        </ul>
+        <blockquote>
+          <p><strong>Her hizmet için benzersiz şifreler kullanın</strong></p>
+        </blockquote>
+        <p>Another common way to recover passwords for hackers is the purchase of stolen passwords on other sites.</p>
+        <p>Örneğin Domino's Pizza, Playstation, Uber, eBay, UPS, Yahoo, Evernote, Nintendo, Linkedin gibi şirketler&nbsp;<sup class="ref"><a href="#note6" id="ref6">[6]</a></sup> büyük ölçekli veri hırsızlığından haberdar oldular. Örneğin, Linkedin ve Gmail'de aynı şifreye sahipseniz, birisi gelen kutunuza girebilir.</p>
+        <p>Bunu büyük ölçekte yapıldığını hayal etmeliyiz. Hacker'lar büyük miktarda çalınmış şifre paketleri satın alır ve ilgilendikleri tüm sitelerde sistematik olarak test ederler: Amazon, Google, Skype, Paypal, vb.</p>
+        <p>Bu nedenle, bu sadece bir öneri değil. Her site için benzersiz şifrelerinizin olması mutlaka gereklidir. Aksi takdirde, tüm kişisel verileriniz tehlikeye girebilir.</p>
+        <!-- Notlar -->
+        <div class="notes">
+          <p id="note4">[4]:&nbsp;<a href="https://en.wikipedia.org/wiki/Brute-force_attack">Brute-force attack</a> veya <a href="https://en.wikipedia.org/wiki/Dictionary_attack">Dictionary attack</a>&nbsp;<a href="#ref5" class="back">&#8617;</a></p>
+          <p id="note5">[5]:&nbsp;Şifrelerinizi kırmak için teorik olarak ne kadar süreceğini test etmek için <a href="https://howsecureismypassword.net">bu siteyi</a> kullanabilirsiniz&nbsp;<a href="#ref6" class="back">&#8617;</a></p>
+          <p id="note6">[6]:&nbsp;Büyük veri ihlallerinin listesi <a href="https://en.wikipedia.org/wiki/List_of_data_breaches">burada</a>&nbsp;<a href="#ref6" class="back">&#8617;</a></p>
+        </div>
+        <!-- /. Notlar -->
+      </div>
+    </section>
+    <!-- /. Section: #passwords -->
+
+    <!-- Section: #password-manager -->
+    <section id="password-manager">
+      <div class="container">
+        <h2><span class="num">3</span> Şifre yöneticisi kullanın</h2>
+        <p>E-postalar, sosyal ağlar, sadakat programları, finans, mobil uygulamalar vb. Hepimizin en az birkaç düzine şifresi var ve bunları hatırlamak insanüstü bir çaba gerektiriyor (özellikle şifreleriniz şöyleyse: <span class="code">2=4Dq7h!N9</span>).</p>
+        <p>Varsayılan olarak kullandığımız çözüm, İnternet tarayıcımızın şifrelerimizi hatırlamasına izin vermektir. Bu oldukça kötü bir alışkanlıktır.</p>
+        <p>Çoğu tarayıcının şifrelerinizi <em>şifrelediği</em> doğrudur, ancak bilgisayar ve tarayıcı açık olduğunda açık metin olarak görüntülenirler.</p>
+        <p>Makinenize tanıtılan herhangi biri tüm çevrimiçi hizmetlerinize bağlanabilir.</p>
+        <p>Ardından, tarayıcılar yalnızca İnternet sayfalarında kullanılan şifreleri saklar. Zamanla, şifreleriniz her yerde olur: evde, ofiste ve telefonunuzda İnternet tarayıcılarınızda, WiFi erişimi için işletim sisteminizde, Smartphone uygulamaları için bir "notlar" dosyasında, bazı profesyonel erişimler için bir kağıt defterinde vb.</p>
+        <p>Bu kaotik yönetim sistemi güvenilir ve dayanıklı olacak kadar karmaşıktır. <em>5 yıl sonra ne yapacaksın? Ve bir bilgisayar değiştirdiğinde?</em> Hassas bilgileri çok sayıda yere sürükletmenize izin verir ve hayatınızı kolaylaştırmak için muhtemelen birçok hizmette aynı şifreleri kullanırsınız.</p>
+        <blockquote>
+          <p><strong>Tüm şifrelerinizi, adreslerinizi, telefon numaralarınızı, IBAN'larınızı, sadakat kartlarınızı vb. tek bir yerde güvence altına almak için bir şifre yöneticisi kullanın.</strong></p>
+        </blockquote>
+        <p>Şifre yöneticileri tüm bu hassas verileri şifreler. Sonra her şeyi kilitlemek için ana şifrenizi girebilirsiniz.</p>
+        <p>Bu tabii ki bu sistemin kusuru. Makinenize (fiziksel veya sanal olarak) giren biri ana şifrenizi ele geçirirse, tüm dijital hayatınız çalınabilir.</p>
+        <p>Bu mükemmel bir çözüm değil, ancak pragmatik, basit ve nispeten güvenlidir.</p>
+        <p>Şifre yöneticisine <em>şifrelemek</em> için çok karmaşık bir şifre seçin (yaklaşık on beş karakter) ve yazmayın, aklınızda tutun.</p>
+        <p>Ardından, Chrome, Firefox, Safari veya Edge'deki tüm şifrelerinizi silin, otomatik şifre kaydetmeyi devre dışı bırakın ve yalnızca şifre yöneticinizi kullanın.</p>
+        <p>Şifre yöneticisi genellikle her erişim için karmaşık şifreler otomatik olarak oluşturmanıza izin verir. Bu yüzden endişelenmeniz gereken bir sorun daha az.</p>
+        <p>İşte bazı şifre yöneticisi seçenekleri:</p>
+        <ul>
+          <li><a href="https://www.dashlane.com">Dashlane</a></li>
+          <li><a href="https://www.lastpass.com">LastPass</a></li>
+          <li><a href="https://keepersecurity.com">Keeper </a></li>
+          <li><a href="https://1password.com">1Password</a></li>
+          <li><a href="https://www.truekey.com">True Key</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- /. Section: #password-manager -->
+
+    <!-- Section: #two-factor -->
+    <section id="two-factor">
+      <div class="container">
+        <h2><span class="num">4</span> İki faktörlü kimlik doğrulamayı etkinleştirin</h2>
+        <p>Birçok saldırı türü şifrelerinizi bulmanıza izin verir. Kişisel olarak hedef alındığınızda, <a href="https://en.wikipedia.org/wiki/Social_engineering_(security)">sosyal mühendislik</a> örneğin en korkunç yöntemlerden biridir.</p>
+        <p><em>Sosyal mühendislik</em>, kişisel bilgilerinizi çalmak için cehaletinizi veya saflığınızı kullanmaktır. Bu, örneğin (yüzlerce başka olası teknik arasında) IT yöneticinizden gelen sahte bir e-posta ile şifrenizi değiştirmenizi istemek suretiyle elde edilebilir&nbsp;<sup class="ref"><a href="#note7" id="ref7">[7]</a></sup>. Örneğin, <a href="https://www.google.com/search?tbm=nws&amp;hl=en&amp;q=hillary+clinton+john+podesta+phishing">Hillary Clinton'ın e-postalarının</a> çalındığı bu tür tekniklerle gerçekleştirilir.</p>
+        <blockquote>
+          <p><strong>Bir şifre hırsızlığına karşı kendinizi korumanın tek yolu, iki faktörlü kimlik doğrulamadır.</strong><br/>
+            Tüm hassas hesaplarınızda bu özelliği etkinleştirmelisiniz.
+          </p>
+        </blockquote>
+        <p>Özellikle, çift faktörlü kimlik doğrulama etkinleştirildiğinde, her yeni cihazdan bağlandığınızda, erişiminizi onaylamak için bir güvenlik kodu (SMS veya mobil cihazınızda görüntülenen) alırsınız.</p>
+        <p>Burada ana çevrimiçi hizmetlerde <em>2 Adımlı Doğrulama</em> nasıl yapılandırılacağı hakkında bilgi verilmiştir:</p>
+        <ul>
+          <li><a href="https://www.google.com/intl/tr/landing/2step/">Google</a></li>
+          <li><a href="https://support.apple.com/tr-tr/HT204915">Apple</a></li>
+          <li><a href="https://support.microsoft.com/tr-tr/help/12408/microsoft-account-about-two-step-verification">Microsoft</a></li>
+          <li><a href="https://www.facebook.com/help/148233965247823">Facebook</a></li>
+          <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=202025410">Amazon</a></li>
+          <li><a href="https://www.dropbox.com/en/help/security/enable-two-step-verification">Dropbox</a></li>
+        </ul>
+        <p><em>Tabii ki bankanızı unutmayın!</em></p>
+        <p>Bu ek bir kısıtlama olsa da, bu tür hassas hesaplar için kesinlikle gereklidir.</p>
+        <p>Ben mümkün olduğunca <a href="https://support.google.com/accounts/answer/1066447?hl=tr">Google Authenticator</a> kullanıyorum. SMS'ten daha kullanışlı, güvenilir ve hızlı olduğunu düşünüyorum.</p>
+        <p>Çift faktörlü kimlik doğrulamayı etkinleştirdiğinizde, genellikle mobil cihazınızı kaybettiğinizde kullanmak üzere <em>yedek anahtarları</em> oluşturmanız gerekir. Bir <a href="#password-manager">şifre yöneticisi</a> seçtiyseniz, bu anahtarları saklamak için doğru yer burasıdır.</p>
+        <!-- Notlar -->
+        <div class="notes">
+          <p id="note7">[7]:&nbsp;<a href="https://en.wikipedia.org/wiki/Phishing">Phishing</a> bakınız&nbsp;<a href="#ref7" class="back">&#8617;</a></p>
+        </div>
+        <!-- /. Notlar -->
+      </div>
+    </section>
+    <!-- /. Section: #two-factor -->
+
+    <!-- Section: #antivirus-and-updates -->
+    <section id="antivirus-and-updates">
+      <div class="container">
+        <h2><span class="num">5</span> Antivirüs yazılımı yükleyin ve otomatik güncellemeleri etkinleştirin</h2>
+        <p>Bu, en popüler önerilerden biridir, bu yüzden üzerinde durmayacağım. Ancak bu da çok önemlidir.</p>
+        <p>Dijital Güvenlik, hackerlar, hükümet kurumları ve çevrimiçi hizmetler arasında küresel ölçekte devasa bir kedi-fare oyunudur.</p>
+        <p>Dijital hizmetler, güvenlik açıkları keşfedildikçe araçlarını sürekli olarak güncellerler.</p>
+        <p>Microsoft, Apple, Google veya antivirüs yazılımına her zaman doğrudan cihazlarımızda değişiklik yapmalarına izin vermek istemeyiz, ancak kendinizi korumanın en etkili yollarından biridir.</p>
+        <blockquote>
+          <p><strong>Tüm cihazlarınızda antivirüs yazılımı yükleyin ve otomatik güncellemeleri etkinleştirin.</strong></p>
+        </blockquote>
+        <p>Otomatik Güncellemeleri etkinleştirmek için bazı kılavuzlar:</p>
+        <ul>
+          <li><a href="https://support.microsoft.com/tr-tr/help/15081/windows-turn-on-automatic-app-updates">Windows</a></li>
+          <li><a href="https://support.google.com/googleplay/answer/113412?hl=tr">Android</a></li>
+          <li><a href="https://support.apple.com/tr-tr/HT201541">macOS</a></li>
+          <li><a href="https://support.apple.com/tr-tr/HT202180">iOS</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- /. Section: #antivirus-and-updates -->
+
+    <!-- Section: #backup -->
+    <section id="backup">
+      <div class="container">
+        <h2><span class="num">6</span> Verilerinizi yedekleyin</h2>
+        <p>Bu da açıkça belirtmek gerekirse, verilerinizi düzenli olarak yedeklemeniz gerektiği açıktır.</p>
+        <p>MacOS'ta <a href="https://support.apple.com/tr-tr/HT201250">Time Machine</a> ve Windows'ta <a href="https://support.microsoft.com/tr-tr/help/17128/windows-8-file-history">File History</a> alanına bakın.</p>
+        <p><strong>Verilerinizi Bulutta saklama konusu çok hassastır.</strong> Her bireyin avantaj ve dezavantajları tartması gerekiyor.</p>
+        <p>Google Drive, Dropbox ve iCloud'daki verileriniz, bu hizmetlerdeki hesaplarınız kadar güvendedir. Eğer <a href="#passwords">benzersiz ve karmaşık bir şifreye</a> sahipseniz ve <a href="#two-factor">iki faktörlü kimlik doğrulamayı</a> etkinleştirdiyseniz, verileriniz izole bir hacker'a karşı oldukça iyi korunur.</p>
+        <p>Öte yandan, bu, <strong>Amerikan federal ajanslarına doğrudan bir kapıdır</strong>&nbsp;<sup class="ref"><a href="#note8" id="ref8">[8]</a></sup>.</p>
+        <p>Çok hassas olan her şey orada olmamalıdır: şifreleriniz, kimlik belgeleriniz, fotoğraflarınız vb.</p>
+        <!-- Notlar -->
+        <div class="notes">
+          <p id="note8">[8]:&nbsp;<a href="http://fortune.com/2017/05/09/snowden-danger-of-cloud/">“Edward Snowden says use cloud services at your own peril”</a>&nbsp;<a href="#ref8" class="back">&#8617;</a></p>
+        </div>
+        <!-- /. Notlar -->
+      </div>
+    </section>
+    <!-- /. Section: #backup -->
+
+    <!-- Section: #multiple-accounts -->
+    <section id="multiple-accounts">
+      <div class="container">
+        <h2><span class="num">7</span> Birden fazla e-posta ve Facebook hesabını yönetin</h2>
+        <p>Facebook ve Google hesaplarınız, Netflix, Airbnb, Instagram veya Uber gibi ikincil hizmetlere erişmek için sıklıkla gereklidir.</p>
+        <p>Gerçekten de çok pratik ve hızlı olsa da, birkaç yıl sonra kişisel verilerimize daha az etik ve güvenli olan onlarca hizmete erişim izni vermiş oluruz.</p>
+        <p>Tinder, Tripadvisor, Spotify veya Pinterest gibi hizmetlere tam kimliğimizi ve tüm arkadaş listemizi vermek gerçekten önemli mi?</p>
+        <blockquote>
+          <p><strong>Yalnızca ana Facebook ve Google hesaplarınıza mutlaka gerekli olduğunda erişim izni vermelisiniz.</strong> Anonimliğin mümkün olduğu tüm hizmetlerde, ikincil hesapları kullanmalısınız.</p>
+        </blockquote>
+        <p>Kişisel verilerinizi güvence altına almanın yanı sıra, Facebook ve Google için 2 hesaba sahip olmak, kendimizi daha özgür ve anonim bir şekilde ifade etmemize ve ana hesaplarımızda spam veya bildirimlerin yığılmasını önlememize olanak tanır.</p>
+        <p>İdeal olarak, birkaç yılda bir, alt hesaplarımızı değiştireceğiz.</p>
+        <p>İkincil hesapları kullanmak istemiyorsanız:</p>
+        <ul class="multiligne">
+          <li>Mümkün olduğunda, Facebook veya Google bağlantısı yerine e-postanızı doldurarak yeni hizmetlere erişiminizi oluşturun,</li>
+          <li>Maksimum izinleri vermekten kaçının. Örneğin, Facebook kimliği doğrularken Arkadaş listesine erişimi işaretlemeyi çıkarmak genellikle mümkündür&nbsp;<sup class="ref"><a href="#note9" id="ref9">[9]</a></sup>.</li>
+        </ul>
+        <!-- Notlar -->
+        <div class="notes">
+          <p id="note9">[9]:&nbsp;Arkadaşlarınız, <a href="https://en.wikipedia.org/wiki/Phishing">phishing</a>, <a href="https://en.wikipedia.org/wiki/Ransomware">ransomware</a> ve <a href="https://en.wikipedia.org/wiki/Social_engineering_(security)">sosyal mühendislik</a> için mükemmel bir kapıdır&nbsp;<a href="#ref9" class="back">&#8617;</a></p>
+        </div>
+        <!-- /. Notlar -->
+      </div>
+    </section>
+    <!-- /. Section: #multiple-accounts -->
+
+    <!-- Section: #trusted-third-parties -->
+    <section id="trusted-third-parties">
+      <div class="container">
+          <h2><span class="num">8</span> Ödemeler için güvenilir üçüncü tarafları kullanın</h2>
+          <blockquote>
+          <p><strong>Mümkün olduğunca, doğrudan bir web sitesinden satın almak yerine <a href="https://www.amazon.com">Amazon</a>'dan veya <a href="https://www.paypal.com">Paypal</a>, <a href="https://www.apple.com/apple-pay/">Apple Pay</a> veya <a href="https://www.google.com/wallet/">Google Wallet</a> aracılığıyla ödeme yapın.</strong></p>
+        </blockquote>
+          <p>Bu hizmetlerin sadece en güvenli hizmetler arasında olduğu bilinmekle birlikte, tüketicilere çok avantajlı koruma politikaları sunarlar. Bir ürün veya hizmet teslim edilmez veya uygun değilse, kendinizi açıklamadan bile genellikle kolayca geri ödeme alabilirsiniz.</p>
+          <p>Evet, bu hizmetlerden geçerek, onların baskın konumlarını daha da güçlendiriyoruz. Ancak iki kötülük arasında seçim yapmak zorundayız. Benim için açık olan şey, işlemlerin güvenliği, ekonomik korumacılık ve felsefi tavırların ötesine geçer (bu konuları liderlerimize bırakalım).</p>
+          <p>Ayrıca, Netflix, Booking, Agoda, Airbnb vb. gibi ikincil hizmetlerde banka kartlarınızı kaydetmekten kaçının. En azından, Paypal veya Apple pay gibi aracılarla otomatik bir borç kesintisini durdurmak daha kolay olacaktır, ancak işlemleriniz de <em>muhtemelen</em> daha güvenli olacaktır.</p>
+        </div>
+    </section>
+    <!-- /. Section: #trusted-third-parties -->
+
+    <!-- Section: #encryption -->
+    <section id="encryption">
+      <div class="container">
+        <h2><span class="num">9</span> Sabit disklerinizi ve konuşmalarınızı şifreleyin</h2>
+        <p>Birçok hizmet ve uygulama artık verilerinizi ve mesajlarınızı doğal olarak şifrelemeyi öneriyor. Ancak bunun etkinleştirilmesi gerekiyor.</p>
+        <blockquote>
+          <p><strong>Mümkün olduğunca şifrelemeyi etkinleştirin</strong></p>
+        </blockquote>
+        <p>Bilgisayarınız için, macOS'ta <a href="https://support.apple.com/tr-tr/HT204837">File Vault</a> veya Windows'ta <a href="https://technet.microsoft.com/tr-tr/library/cc732774(v=ws.11).aspx">BitLocker Drive Encryption</a> etkinleştirin.</p>
+        <p>Mobil cihazlarınız için, iOS cihazlarınızın şifrelenmesi için Apple Kimliğinizi kullanmanız yeterlidir. Android'de üreticiye bağlıdır, ancak <a href="https://docs.microsoft.com/tr-tr/intune-user-help/encrypt-your-device-android">genellikle mümkündür</a>.</p>
+        <p>Ayrıca, <a href="https://support.google.com/mail/answer/6330403?hl=tr">Gmail</a>, <a href="https://www.facebook.com/help/messenger-app/811527538946901">Messenger</a>, <a href="https://support.skype.com/tr/faq/FA31/skype-sifreleme-kullan-r-m">Skype</a>, <a href="https://faq.whatsapp.com/tr/general/28030015">WhatsApp</a>, <a href="https://help.line.me/line/ios/categoryId/20000012/3/pc?lang=tr#10002424">Line</a>, <a href="http://admin.wechat.com/wiki/index.php?title=Message_Cryptography_FAQs">WeChat</a> vb. gibi birçok mesajlaşma uygulaması için de mümkündür, ancak kişisel kullanımınıza bağlı olarak duruma göre öğrenmeniz gerekiyor.</p>
+      </div>
+    </section>
+    <!-- /. Section: #encryption -->
+
+    <!-- Section: #sensitive-data -->
+    <section id="sensitive-data">
+      <div class="container">
+        <h2><span class="num">10</span> Hassas verilerinizi koruyun</h2>
+        <p>Tıbbi kayıtlar, fotoğraflar, Bitcoin'ler, çifte hayat vb. gibi daha güçlü bir şekilde özel verilerinizi korumanız gerekiyorsa, bir <a href="https://en.wikipedia.org/wiki/Disk_encryption">dijital kasa</a> oluşturmayı düşünmelisiniz.</p>
+        <p>Kullanımı oldukça kolay ve <em>a priori</em> güvenilir olarak kabul edilen yazılım şifrelemeleri mevcuttur. Örneğin:</p>
+        <ul>
+          <li><a href="https://www.veracrypt.fr/en/">VeraCrypt</a></li>
+          <li><a href="https://www.ciphershed.org">CipherShed</a></li>
+          <li><a href="https://diskcryptor.net/">DiskCryptor</a></li>
+          <li><a href="https://gitlab.com/cryptsetup/cryptsetup/">LUKS</a></li>
+        </ul>
+        <p>Kendinizi eğitin.</p>
+      </div>
+    </section>
+    <!-- /. Section: #sensitive-data -->
+
+    <!-- Section: #public-data -->
+    <section id="public-data">
+      <div class="container">
+        <h2><span class="num">+</span> Yayınladıklarınıza dikkat edin</h2>
+        <h3>Özel bilgilerinizi yayınlamayın</h3>
+        <p>Özel hayatınızı kamuya açık bir şekilde yaymadığınızı varsayıyorum. Bu rehberin amacı bu değil, ancak konumunuzu veya kişisel bilgilerinizi yayınlamamanızı ve arkadaş listenizi gizlemenizi öneririm.</p>
+        <h3>Düzenli olarak ne hakkınızda bulunabileceğini kontrol edin</h3>
+        <p>Adınızı, e-postanızı, telefon numaranızı ve adresinizi Google'da arayarak düzenli olarak kamuya açık olanları kontrol edin.</p>
+        <p>Farklı bir Facebook hesabından, yayınlarınızı, fotoğraflarınızı ve videolarınızı arayın ve kamuya açık olanların doğru olduğunu doğrulayın.</p>
+      </div>
+    </section>
+    <!-- /. Section: #public-data -->
+
+    <!-- Footer -->
+    <footer>
+      <p>Açık kaynaklı olan kılavuz, <a href="https://github.com/imnotadeveloper/digital-guide/blob/master/LICENSE.md">MIT Lisansı</a> kapsamında, garanti olmaksızın <em>“olduğu gibi”</em> sağlanır.</p>
+      <p><a href="https://github.com/imnotadeveloper/digital-guide" class="github"><span>GitHub</span></a></p>
+    </footer>
+    <!-- /. Footer -->
+
+    <!-- Lang -->
+    <div class=lang>
+      <a href="../" hreflang="en">English</a> | <a href="../fr/" hreflang="fr">Français</a> | Türkçe
+    </div>
+    <!-- /. Lang -->
+
+    <script>
+    // Toggle Menu
+    window.onload = function() {
+      var navigation = document.getElementsByTagName("nav")[0];
+      document.addEventListener("click", function(event) {
+        if (!navigation.contains(event.target)) {
+          navigation.classList.remove("show");
+        }
+        else {
+          navigation.classList.toggle("show");
+        }
+      });
+    }
+    </script>
+
+  </body>
+</html>
